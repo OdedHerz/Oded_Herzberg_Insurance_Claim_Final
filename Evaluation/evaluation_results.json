@@ -1,0 +1,301 @@
+{
+  "evaluation_timestamp": "2025-12-13T16:50:38.538004",
+  "query_results_timestamp": "2025-12-13T16:46:16.585522",
+  "query_results_file": "Evaluation\\query_results.json",
+  "total_tests": 10,
+  "test_results": [
+    {
+      "test_id": "needle_01",
+      "question": "Who conducted the phone interview with Sarah Mitchell?",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "answer": "The information is not available in the provided documents.",
+      "ground_truth": "Claims Adjuster Linda Martinez conducted the phone interview with Sarah Mitchell at 16:30:00 hours.",
+      "expected_chunks": [
+        "page_4_chunk_2"
+      ],
+      "retrieved_chunk_ids": [
+        "page_10_chunk_0",
+        "page_10_chunk_1",
+        "page_4_chunk_0",
+        "page_6_chunk_0",
+        "page_9_chunk_5",
+        "page_2_chunk_1"
+      ],
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.0,
+        "answer_similarity": 0.7569939454609808,
+        "answer_correctness": 0.1892484863652452
+      }
+    },
+    {
+      "test_id": "needle_02",
+      "question": "What was Sarah Mitchell's blood pressure during the emergency assessment?",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "answer": "Sarah Mitchell's blood pressure during the emergency assessment was recorded at 145/92 millimeters of mercury.",
+      "ground_truth": "Sarah Mitchell's blood pressure during the emergency assessment was recorded at 145/92 millimeters of mercury.",
+      "expected_chunks": [
+        "page_3_chunk_1"
+      ],
+      "retrieved_chunk_ids": [
+        "page_3_chunk_2",
+        "page_3_chunk_1",
+        "page_4_chunk_0",
+        "page_6_chunk_0",
+        "page_4_chunk_3",
+        "page_3_chunk_3"
+      ],
+      "scores": {
+        "context_precision": 0.49999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0000000000000004,
+        "answer_similarity": 1.0,
+        "answer_correctness": 1.0
+      }
+    },
+    {
+      "test_id": "needle_03",
+      "question": "How many feet were the skid marks at the collision scene?",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "answer": "The skid marks at the collision scene measured exactly 47 feet from Chen's vehicle trajectory on the wet pavement.",
+      "ground_truth": "The skid marks measured exactly 47 feet from Chen's vehicle trajectory on the wet pavement.",
+      "expected_chunks": [
+        "page_3_chunk_2"
+      ],
+      "retrieved_chunk_ids": [
+        "page_3_chunk_4",
+        "page_4_chunk_4",
+        "page_4_chunk_3",
+        "page_2_chunk_4",
+        "page_1_chunk_4",
+        "page_2_chunk_5"
+      ],
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.915020998923157,
+        "answer_similarity": 0.9894756315878582,
+        "answer_correctness": 0.9973689078969645
+      }
+    },
+    {
+      "test_id": "needle_04",
+      "question": "What was the speed of Robert Chen's vehicle when it entered the intersection?",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "answer": "Robert Chen's vehicle was traveling at an estimated speed of 45 miles per hour when it entered the intersection.",
+      "ground_truth": "Robert Chen's vehicle was traveling at 45 miles per hour when it entered the intersection.",
+      "expected_chunks": [
+        "page_2_chunk_2"
+      ],
+      "retrieved_chunk_ids": [
+        "page_2_chunk_4",
+        "page_7_chunk_7",
+        "page_7_chunk_2",
+        "page_3_chunk_5",
+        "page_2_chunk_3",
+        "page_4_chunk_5"
+      ],
+      "scores": {
+        "context_precision": 0.699999999965,
+        "context_recall": 1.0,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.9937478577115667,
+        "answer_similarity": 0.9961571342191874,
+        "answer_correctness": 0.9990392835547969
+      }
+    },
+    {
+      "test_id": "needle_05",
+      "question": "What is the claim number for this insurance claim?",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "answer": "The claim number for this insurance claim is CLM-2024-00789-AUTO.",
+      "ground_truth": "The claim number for this insurance claim is CLM-2024-00789-AUTO.",
+      "expected_chunks": [
+        "page_1_chunk_0"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_chunk_0",
+        "page_1_chunk_1",
+        "page_10_chunk_0",
+        "page_10_chunk_2",
+        "page_9_chunk_3",
+        "page_9_chunk_8"
+      ],
+      "scores": {
+        "context_precision": 0.8333333332916666,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "answer_similarity": 1.0,
+        "answer_correctness": 0.9999997488766389
+      }
+    },
+    {
+      "test_id": "summary_01",
+      "question": "What was the total estimated claim value?",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "answer": "The total estimated claim value for Sarah Mitchell's insurance claim, CLM-2024-00789-AUTO, is $47,850. This amount encompasses $44,010 for vehicle damage repairs and $3,840 for medical expenses incurred due to the accident.",
+      "ground_truth": "The total estimated claim value was $47,850, consisting of $44,010 for vehicle repairs and $3,840 for medical expenses.",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary",
+        "page_4_summary",
+        "page_5_summary",
+        "page_9_summary"
+      ],
+      "scores": {
+        "context_precision": 0.999999999975,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8755287590533737,
+        "answer_similarity": 0.9009548685161618,
+        "answer_correctness": 0.6538065032143388
+      }
+    },
+    {
+      "test_id": "summary_02",
+      "question": "Summarize the events that led to the claim.",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "answer": "On January 15, 2024, Sarah Mitchell filed claim number CLM-2024-00789-AUTO following a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle. The accident occurred at approximately 09:23 AM when Robert Chen failed to obey a traffic control device, entering the intersection against a red light. Witness Marcus Thompson confirmed Chen's violation, noting that his brake lights did not activate until after he entered the intersection. The Seattle Police Department subsequently issued a citation to Chen, who was determined to be 100% at fault for the incident, leading to the claim for vehicle repairs and medical expenses totaling $47,850.",
+      "ground_truth": "On January 15, 2024, at 09:23:45 AM, Sarah Mitchell was involved in a multi-vehicle collision at the intersection of Pine Street and 4th Avenue in Seattle. Robert Chen's Toyota Camry ran a red light at 45 mph and struck Mitchell's Honda Accord on the driver's side door. Emergency responders arrived within 8 minutes, and Mitchell was transported to Seattle Medical Center with whiplash and cervical spine strain. The incident occurred during morning rush hour on wet roads from overnight rainfall.",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_2_summary",
+        "page_3_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary",
+        "page_9_summary",
+        "page_4_summary",
+        "page_7_summary"
+      ],
+      "scores": {
+        "context_precision": 0.0,
+        "context_recall": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8025342453927246,
+        "answer_similarity": 0.9258388190207891,
+        "answer_correctness": 0.36003113332662584
+      }
+    },
+    {
+      "test_id": "summary_03",
+      "question": "What was the outcome of Sarah Mitchell's medical treatment?",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "answer": "Sarah Mitchell's medical treatment following the accident was comprehensive and included a follow-up appointment with Dr. Michael Patterson, who noted a decrease in her pain level from six to four. She was prescribed a 12-session physical therapy program at Seattle Rehabilitation Center, which was managed by Physical Therapist Amanda Chen. The total estimated medical treatment costs amounted to $3,840, all of which were fully covered by her insurance policy. Overall, her treatment aimed to address cervical spine tenderness and improve her recovery from the injuries sustained in the collision.",
+      "ground_truth": "Sarah Mitchell was diagnosed with Grade 2 whiplash injury, cervical spine strain, and mild concussion. She underwent emergency care, CT scan, and was prescribed physical therapy consisting of 12 sessions over 6 weeks. By her follow-up appointment, her pain had improved from 6 to 4 out of 10. She received full medical clearance from Dr. Patterson on February 3, 2024, with a good prognosis for full recovery. Total medical costs were $3,840.",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_3_summary",
+        "page_4_summary",
+        "page_6_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_6_summary",
+        "page_4_summary",
+        "page_2_summary",
+        "page_3_summary"
+      ],
+      "scores": {
+        "context_precision": 0.3333333333,
+        "context_recall": 0.4,
+        "faithfulness": 0.9166666666666666,
+        "answer_relevancy": 0.9358311760780729,
+        "answer_similarity": 0.940114161391901,
+        "answer_correctness": 0.5350285403479753
+      }
+    },
+    {
+      "test_id": "summary_04",
+      "question": "Who was determined to be at fault and why?",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "answer": "Robert Chen was determined to be 100% at fault for the accident involving Sarah Mitchell's vehicle. This conclusion was supported by multiple pieces of evidence, including a traffic citation issued by the Seattle Police Department for failing to obey a traffic control device, specifically running a red light. Additionally, witness statements corroborated that Chen entered the intersection against the red light, and a traffic analysis confirmed a significant violation of the traffic signal timing. State Farm Insurance formally accepted liability based on these findings.",
+      "ground_truth": "Robert Chen was determined to be 100% at fault for the collision. Evidence showed that Chen ran a red light at 45 mph, entered the intersection 2.3 seconds after the light turned red, and failed to yield the right of way. Video forensics, skid mark analysis, and witness testimony all confirmed that Chen violated traffic laws and caused the collision. Mitchell was following all traffic regulations and had the right of way.",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_2_summary",
+        "page_7_summary",
+        "page_9_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_4_summary",
+        "page_9_summary",
+        "page_2_summary",
+        "page_7_summary"
+      ],
+      "scores": {
+        "context_precision": 0.3833333333205555,
+        "context_recall": 0.25,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8926273571541096,
+        "answer_similarity": 0.9499689433442293,
+        "answer_correctness": 0.5708255691693906
+      }
+    },
+    {
+      "test_id": "summary_05",
+      "question": "What was the final resolution of the insurance claim?",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "answer": "The final resolution of the insurance claim CLM-2024-00789-AUTO, filed by Sarah Mitchell, occurred on February 5, 2024. The claim was settled for a total of $47,850, which included $43,510 for vehicle repairs and $3,840 for medical expenses. The settlement was based on the assessment of vehicle damage and medical costs, with State Farm Insurance accepting full liability for the incident involving Robert Chen. Mitchell's policy included a $500 deductible, which was accounted for in the final payment.",
+      "ground_truth": "The claim was resolved on February 5, 2024, with a total payout of $47,850. Sarah Mitchell received $43,510 for vehicle damage (after $500 deductible), and $3,840 was paid directly to medical providers. The vehicle was repaired and passed quality inspection with certificate QCC-2024-0156. Mitchell received full medical clearance and completed all physical therapy. The claim was processed within 21 calendar days, meeting company service standards, with all parties satisfied and no disputes filed.",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary",
+        "page_9_summary",
+        "page_4_summary",
+        "page_5_summary"
+      ],
+      "scores": {
+        "context_precision": 0.5888888888692593,
+        "context_recall": 0.4,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.888696287068347,
+        "answer_similarity": 0.9424595271746548,
+        "answer_correctness": 0.568948215126997
+      }
+    }
+  ],
+  "aggregate_scores": {
+    "context_precision": 0.5338888888571481,
+    "context_recall": 0.6050000000000001,
+    "faithfulness": 0.8416666666666666,
+    "answer_relevancy": 0.8303986681381351,
+    "answer_similarity": 0.9401963030715763,
+    "answer_correctness": 0.6874296387878973
+  }
+}

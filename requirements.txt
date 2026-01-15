@@ -1,0 +1,33 @@
+# PDF Generation
+reportlab==4.0.7
+
+# LlamaIndex Core - latest versions
+llama-index-core>=0.12.0
+llama-index>=0.12.0
+
+# LLM and Embeddings
+llama-index-llms-openai>=0.3.0
+llama-index-embeddings-openai>=0.3.0
+openai>=1.54.0
+
+# Vector Store
+llama-index-vector-stores-supabase>=0.3.0
+supabase>=2.9.0
+vecs>=0.4.3
+psycopg2-binary>=2.9.9
+
+# PDF Reading
+llama-index-readers-file>=0.3.0
+pymupdf>=1.24.10
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# Utilities
+numpy>=1.26.4
+
+# RAGAS Evaluation
+ragas>=0.1.0
+google-generativeai>=0.3.0
+langchain-google-genai>=1.0.0
+datasets>=2.14.0

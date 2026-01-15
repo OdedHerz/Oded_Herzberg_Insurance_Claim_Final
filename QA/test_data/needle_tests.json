@@ -1,0 +1,228 @@
+{
+  "_description": "Needle Agent QA Tests - 20 questions testing precise fact extraction",
+  "_note": "Each test includes ground truth, expected patterns for code graders, and model grader criteria",
+  "tests": [
+    {
+      "id": "needle_01",
+      "question": "What time did the collision occur?",
+      "ground_truth": "The collision occurred at 09:23:45 AM on January 15, 2024.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "time_pattern": "09:23:45|09:23",
+        "time_format": "\\d{2}:\\d{2}(:\\d{2})?\\s*(AM|PM)",
+        "date_pattern": "January 15, 2024|2024-01-15"
+      },
+      "model_grader_criteria": ["factual_accuracy", "completeness", "precision"]
+    },
+    {
+      "id": "needle_02",
+      "question": "What is the claim number?",
+      "ground_truth": "The claim number is CLM-2024-00789-AUTO.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "claim_id_pattern": "CLM-2024-00789-AUTO",
+        "claim_format": "CLM-\\d{4}-\\d{5}-[A-Z]+"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_03",
+      "question": "What was Sarah Mitchell's blood pressure during the emergency assessment?",
+      "ground_truth": "Sarah Mitchell's blood pressure was 145/92 millimeters of mercury.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "bp_pattern": "145/92",
+        "bp_format": "\\d{2,3}/\\d{2,3}"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision", "medical_accuracy"]
+    },
+    {
+      "id": "needle_04",
+      "question": "How many feet were the skid marks?",
+      "ground_truth": "The skid marks measured 47 feet.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "distance_pattern": "47",
+        "unit_pattern": "feet|ft"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_05",
+      "question": "What was the speed of Robert Chen's vehicle when it entered the intersection?",
+      "ground_truth": "Robert Chen's vehicle was traveling at 45 miles per hour.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "speed_pattern": "45",
+        "unit_pattern": "miles per hour|mph"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_06",
+      "question": "Who conducted the phone interview with Sarah Mitchell?",
+      "ground_truth": "Claims Adjuster Linda Martinez conducted the phone interview.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "name_pattern": "Linda Martinez",
+        "role_pattern": "Claims Adjuster|Adjuster"
+      },
+      "model_grader_criteria": ["factual_accuracy", "completeness"]
+    },
+    {
+      "id": "needle_07",
+      "question": "What was the VIN (vehicle identification number) of Sarah Mitchell's vehicle?",
+      "ground_truth": "Sarah Mitchell's vehicle VIN was 1HGCV1F3XNA123456.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "vin_pattern": "1HGCV1F3XNA123456",
+        "vin_format": "1HGCV[0-9A-Z]{11}"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_08",
+      "question": "How long was the ambulance transport to the hospital?",
+      "ground_truth": "The ambulance transport took 23 minutes, departing at 09:52:00 and arriving at 10:15:33 AM.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "duration_pattern": "23 minutes|23 min",
+        "time_pattern": "09:52|10:15"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision", "completeness"]
+    },
+    {
+      "id": "needle_09",
+      "question": "Who was the attending physician at Seattle Medical Center?",
+      "ground_truth": "Dr. Michael Patterson was the attending physician.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "name_pattern": "Michael Patterson|Dr\\. Patterson",
+        "title_pattern": "Dr\\.|Doctor"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_10",
+      "question": "What was the make and model of Robert Chen's vehicle?",
+      "ground_truth": "Robert Chen drove a Toyota Camry.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "make_pattern": "Toyota",
+        "model_pattern": "Camry"
+      },
+      "model_grader_criteria": ["factual_accuracy", "completeness"]
+    },
+    {
+      "id": "needle_11",
+      "question": "How many physical therapy sessions were prescribed?",
+      "ground_truth": "12 physical therapy sessions were prescribed over 6 weeks.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "sessions_pattern": "12",
+        "duration_pattern": "6 weeks"
+      },
+      "model_grader_criteria": ["factual_accuracy", "completeness"]
+    },
+    {
+      "id": "needle_12",
+      "question": "What was Sarah Mitchell's heart rate during the emergency assessment?",
+      "ground_truth": "Sarah Mitchell's heart rate was 92 beats per minute.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "hr_pattern": "92",
+        "unit_pattern": "beats per minute|bpm"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision", "medical_accuracy"]
+    },
+    {
+      "id": "needle_13",
+      "question": "What was the intersection where the collision occurred?",
+      "ground_truth": "The collision occurred at the intersection of Maple Avenue and 5th Street in Seattle.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "street1_pattern": "Maple Avenue",
+        "street2_pattern": "5th Street",
+        "city_pattern": "Seattle"
+      },
+      "model_grader_criteria": ["factual_accuracy", "completeness", "precision"]
+    },
+    {
+      "id": "needle_14",
+      "question": "What was the ambient temperature at the time of the collision?",
+      "ground_truth": "The ambient temperature was 42 degrees Fahrenheit.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "temp_pattern": "42",
+        "unit_pattern": "Fahrenheit|°F|degrees"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_15",
+      "question": "Which police officer documented the accident scene?",
+      "ground_truth": "Officer James Wilson from the Seattle Police Department documented the scene.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "name_pattern": "James Wilson|Officer Wilson",
+        "title_pattern": "Officer",
+        "dept_pattern": "Seattle Police"
+      },
+      "model_grader_criteria": ["factual_accuracy", "completeness"]
+    },
+    {
+      "id": "needle_16",
+      "question": "What was the repair shop's name?",
+      "ground_truth": "The vehicle was repaired at Premier Auto Body Shop.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "shop_pattern": "Premier Auto Body Shop|Premier Auto Body"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_17",
+      "question": "How many minutes did it take for emergency responders to arrive?",
+      "ground_truth": "Emergency responders arrived within 8 minutes.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "time_pattern": "8",
+        "unit_pattern": "minutes|mins"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_18",
+      "question": "What was Sarah Mitchell's pain level rating?",
+      "ground_truth": "Sarah Mitchell reported a pain level of 6 out of 10.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "pain_pattern": "6",
+        "scale_pattern": "out of 10|/10"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_19",
+      "question": "What was the deductible amount on Sarah Mitchell's policy?",
+      "ground_truth": "The deductible amount was $500.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "amount_pattern": "500|\\$500",
+        "currency_pattern": "\\$"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    },
+    {
+      "id": "needle_20",
+      "question": "What was the lifetime warranty certificate number issued by Premier Auto Body?",
+      "ground_truth": "The lifetime warranty certificate number was WAR-2024-0156.",
+      "expected_route": "needle",
+      "code_grader_checks": {
+        "cert_pattern": "WAR-2024-0156",
+        "cert_format": "WAR-\\d{4}-\\d{4}"
+      },
+      "model_grader_criteria": ["factual_accuracy", "precision"]
+    }
+  ]
+}

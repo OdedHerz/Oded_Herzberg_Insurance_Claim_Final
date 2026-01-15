@@ -1,0 +1,96 @@
+{
+  "_description": "Routing Agent QA Tests - 10 questions testing correct query classification",
+  "_note": "Tests whether routing agent correctly classifies questions as 'needle' or 'summary'",
+  "tests": [
+    {
+      "id": "routing_01",
+      "question": "What time did the collision occur?",
+      "expected_route": "needle",
+      "reasoning": "Specific time/date question requiring precise fact extraction",
+      "code_grader_checks": {
+        "route_match": "needle"
+      }
+    },
+    {
+      "id": "routing_02",
+      "question": "Summarize the events that led to the claim.",
+      "expected_route": "summary",
+      "reasoning": "Explicitly asks for summary of events, requires synthesis",
+      "code_grader_checks": {
+        "route_match": "summary"
+      }
+    },
+    {
+      "id": "routing_03",
+      "question": "What was Sarah Mitchell's blood pressure?",
+      "expected_route": "needle",
+      "reasoning": "Specific medical measurement, precise factual question",
+      "code_grader_checks": {
+        "route_match": "needle"
+      }
+    },
+    {
+      "id": "routing_04",
+      "question": "What was the total estimated claim value?",
+      "expected_route": "summary",
+      "reasoning": "Asks for overall total, requires synthesis of financial information",
+      "code_grader_checks": {
+        "route_match": "summary"
+      }
+    },
+    {
+      "id": "routing_05",
+      "question": "Who was the attending physician?",
+      "expected_route": "needle",
+      "reasoning": "Specific person identification, precise fact",
+      "code_grader_checks": {
+        "route_match": "needle"
+      }
+    },
+    {
+      "id": "routing_06",
+      "question": "Describe the emergency response process.",
+      "expected_route": "summary",
+      "reasoning": "Asks for description of process, requires overview and synthesis",
+      "code_grader_checks": {
+        "route_match": "summary"
+      }
+    },
+    {
+      "id": "routing_07",
+      "question": "What was the claim number?",
+      "expected_route": "needle",
+      "reasoning": "Specific identifier, precise extraction needed",
+      "code_grader_checks": {
+        "route_match": "needle"
+      }
+    },
+    {
+      "id": "routing_08",
+      "question": "Who was determined to be at fault and why?",
+      "expected_route": "summary",
+      "reasoning": "Asks for overall conclusion and reasoning, requires synthesis",
+      "code_grader_checks": {
+        "route_match": "summary"
+      }
+    },
+    {
+      "id": "routing_09",
+      "question": "How many feet were the skid marks?",
+      "expected_route": "needle",
+      "reasoning": "Specific measurement question, precise numerical fact",
+      "code_grader_checks": {
+        "route_match": "needle"
+      }
+    },
+    {
+      "id": "routing_10",
+      "question": "What was the timeline from collision to claim resolution?",
+      "expected_route": "summary",
+      "reasoning": "Asks for overall timeline/sequence, requires synthesis of dates and events",
+      "code_grader_checks": {
+        "route_match": "summary"
+      }
+    }
+  ]
+}

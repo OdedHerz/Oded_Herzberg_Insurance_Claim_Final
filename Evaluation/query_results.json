@@ -1,0 +1,291 @@
+{
+  "timestamp": "2025-12-13T16:46:16.585522",
+  "total_queries": 10,
+  "test_cases": [
+    {
+      "test_id": "needle_01",
+      "question": "Who conducted the phone interview with Sarah Mitchell?",
+      "answer": "The information is not available in the provided documents.",
+      "contexts": [
+        "Claim Resolution and Final Summary\nFinal claim resolution completed on February 5, 2024, for claim number CLM-2024-00789-AUTO under\npolicy PAI-8847562-2023 for policyholder Sarah Mitchell.",
+        "for policyholder Sarah Mitchell. All documentation reviewed and approved by\nProgressive Auto Insurance Claims Department with authorization from Regional Claims Manager\nDavid Thompson.",
+        "Event 3: Investigation and Medical Documentation\nMitchell was transported to Seattle Medical Center Emergency Department by ambulance, arriving at\n10:15:33 AM for medical evaluation. She was examined by Dr. Michael Patterson at 14:45:18 hours\nafter initial triage and stabilization.",
+        "Event 5: Medical Follow-up and Physical Therapy\nMitchell attended her scheduled follow-up appointment with Dr. Michael Patterson at Seattle Medical\nCenter on January 22, 2024, at 08:00:00 AM, exactly one week after the initial collision.",
+        "on behalf of their insured Robert Chen. The acceptance letter document number\nSF-LA-2024-12847 confirms their responsibility for all damages sustained by Sarah Mitchell including\nvehicle damage, medical expenses, lost wages, and any additional costs related to the collision\nincident.",
+        "in Seattle, Washington, zip code 98101. GPS coordinates recorded at the scene were\n47.6062 degrees North latitude and 122.3321 degrees West longitude for precise location\ndocumentation.\nPolicyholder Sarah Mitchell was traveling northbound on Maple Avenue at approximately 25 miles per\nhour in moderate traffic flow."
+      ],
+      "ground_truth": "Claims Adjuster Linda Martinez conducted the phone interview with Sarah Mitchell at 16:30:00 hours.",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "expected_chunks": [
+        "page_4_chunk_2"
+      ],
+      "retrieved_chunk_ids": [
+        "page_10_chunk_0",
+        "page_10_chunk_1",
+        "page_4_chunk_0",
+        "page_6_chunk_0",
+        "page_9_chunk_5",
+        "page_2_chunk_1"
+      ]
+    },
+    {
+      "test_id": "needle_02",
+      "question": "What was Sarah Mitchell's blood pressure during the emergency assessment?",
+      "answer": "Sarah Mitchell's blood pressure during the emergency assessment was recorded at 145/92 millimeters of mercury.",
+      "contexts": [
+        "and\nheart rate of 98 beats per minute. Mitchell was alert and oriented to person, place and time during the\nmedical evaluation.",
+        "Police Department Unit\n3-Adam-12. Paramedic Jennifer Ross from Medic Unit 47 immediately assessed Mitchell's medical\ncondition upon arrival at the scene.\nVital signs were recorded for Mitchell showing blood pressure of 145/92 millimeters of mercury and\nheart rate of 98 beats per minute.",
+        "Event 3: Investigation and Medical Documentation\nMitchell was transported to Seattle Medical Center Emergency Department by ambulance, arriving at\n10:15:33 AM for medical evaluation. She was examined by Dr. Michael Patterson at 14:45:18 hours\nafter initial triage and stabilization.",
+        "Event 5: Medical Follow-up and Physical Therapy\nMitchell attended her scheduled follow-up appointment with Dr. Michael Patterson at Seattle Medical\nCenter on January 22, 2024, at 08:00:00 AM, exactly one week after the initial collision.",
+        "to document the incident details. Mitchell confirmed the complete timeline of events and provided\ndashboard camera footage clearly showing her vehicle traveling at 24 miles per hour at the moment of\nimpact.",
+        "and time during the\nmedical evaluation. She complained of significant neck stiffness and reported a headache with severity\nlevel of six out of ten on the standard pain scale.\nOfficer James Wilson from Seattle Police Department secured the intersection at 09:32:00 hours to\npreserve the accident scene."
+      ],
+      "ground_truth": "Sarah Mitchell's blood pressure during the emergency assessment was recorded at 145/92 millimeters of mercury.",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "expected_chunks": [
+        "page_3_chunk_1"
+      ],
+      "retrieved_chunk_ids": [
+        "page_3_chunk_2",
+        "page_3_chunk_1",
+        "page_4_chunk_0",
+        "page_6_chunk_0",
+        "page_4_chunk_3",
+        "page_3_chunk_3"
+      ]
+    },
+    {
+      "test_id": "needle_03",
+      "question": "How many feet were the skid marks at the collision scene?",
+      "answer": "The skid marks at the collision scene measured exactly 47 feet from Chen's vehicle trajectory on the wet pavement.",
+      "contexts": [
+        "hours to\npreserve the accident scene. Photographic evidence was collected showing skid marks measuring\nexactly 47 feet from Chen's vehicle trajectory on the wet pavement.",
+        "miles per hour at the moment of\nimpact. Police report number SPD-2024-0156 was officially filed at 17:15:00.\nThe total estimated claim value is $47,850 dollars consisting of $44,010 for vehicle damage and $3,840\nfor medical expenses.",
+        "to document the incident details. Mitchell confirmed the complete timeline of events and provided\ndashboard camera footage clearly showing her vehicle traveling at 24 miles per hour at the moment of\nimpact.",
+        "estimated speed of 45\nmiles per hour. Security camera footage timestamped at 09:23:44 clearly shows Chen's vehicle\nentering the intersection against a red traffic signal.\nThe collision impact occurred on the driver's side front quarter panel of Mitchell's Honda Accord\ncausing significant structural damage.",
+        "vehicle repairs and medical expenses. The incident occurred during morning\nrush hour traffic conditions with wet road surfaces from overnight rainfall. All involved parties have\nprovided official statements to investigating officers.",
+        "significant structural damage. Impact force caused Mitchell's vehicle to rotate counterclockwise\nand collide with a parked 2020 Ford F-150 bearing license plate WA-XYZ-7890. Vehicle airbags\ndeployed in Mitchell's car at 09:23:46. Mitchell reported immediate neck pain and dizziness."
+      ],
+      "ground_truth": "The skid marks measured exactly 47 feet from Chen's vehicle trajectory on the wet pavement.",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "expected_chunks": [
+        "page_3_chunk_2"
+      ],
+      "retrieved_chunk_ids": [
+        "page_3_chunk_4",
+        "page_4_chunk_4",
+        "page_4_chunk_3",
+        "page_2_chunk_4",
+        "page_1_chunk_4",
+        "page_2_chunk_5"
+      ]
+    },
+    {
+      "test_id": "needle_04",
+      "question": "What was the speed of Robert Chen's vehicle when it entered the intersection?",
+      "answer": "Robert Chen's vehicle was traveling at an estimated speed of 45 miles per hour when it entered the intersection.",
+      "contexts": [
+        "estimated speed of 45\nmiles per hour. Security camera footage timestamped at 09:23:44 clearly shows Chen's vehicle\nentering the intersection against a red traffic signal.\nThe collision impact occurred on the driver's side front quarter panel of Mitchell's Honda Accord\ncausing significant structural damage.",
+        "cameras covering the\nintersection. Frame-by-frame analysis confirmed Chen's vehicle entered the intersection at timestamp\n09:23:45.127 while the signal had transitioned to red at timestamp 09:23:42.850, providing definitive\nevidence supporting a 2.277 second red light violation.",
+        "an unobstructed view of the collision. His statement confirmed\nhe observed Chen's vehicle approaching at high speed and entering the intersection against a red\nsignal.\nThompson's testimony included specific observations: he noticed Chen's brake lights did not illuminate\nuntil after entering the intersection, the traffic signal had been red for approximately two seconds before\nChen's vehicle entered, and he immediately called 911 at 09:24:33 providing his contact information\nand offering to remain at the scene as a witness.",
+        "vehicle trajectory on the wet pavement. Traffic camera footage was\nretrieved showing signal timing that confirmed Chen entered the intersection 2.3 seconds after the light\nturned red.\nChen's vehicle maintenance records revealed that a brake system warning light had been active for 12\ndays prior to the incident.",
+        "200 feet due to the precipitation. The traffic\nsignal was displaying a green light for northbound traffic.\nAt precisely 09:23:45 hours, a 2019 Toyota Camry bearing license plate WA-ABC-1234 and driven by\nRobert Chen entered the intersection traveling eastbound on 5th Street at an estimated speed of 45\nmiles per hour.",
+        "damage and $3,840\nfor medical expenses. Liability determination assigns 100 percent fault to Robert Chen based on traffic\nsignal evidence, multiple witness statements, and official police citation. The claim was approved for\nprocessing at 18:22:33 with expected resolution of 15 to 20 business days."
+      ],
+      "ground_truth": "Robert Chen's vehicle was traveling at 45 miles per hour when it entered the intersection.",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "expected_chunks": [
+        "page_2_chunk_2"
+      ],
+      "retrieved_chunk_ids": [
+        "page_2_chunk_4",
+        "page_7_chunk_7",
+        "page_7_chunk_2",
+        "page_3_chunk_5",
+        "page_2_chunk_3",
+        "page_4_chunk_5"
+      ]
+    },
+    {
+      "test_id": "needle_05",
+      "question": "What is the claim number for this insurance claim?",
+      "answer": "The claim number for this insurance claim is CLM-2024-00789-AUTO.",
+      "contexts": [
+        "INSURANCE CLAIM DOCUMENT\nClaim Introduction and Overview\nThis insurance claim is filed under claim number CLM-2024-00789-AUTO and policy number\nPAI-8847562-2023.",
+        "and policy number\nPAI-8847562-2023. The claim was officially submitted on January 15, 2024, at 14:32:17 hours through\nProgressive Auto Insurance and will be processed according to standard company procedures.\nThe policyholder is Sarah Mitchell who holds a Comprehensive Auto Insurance policy covering the\ninsured vehicle, a 2022 Honda Accord with vehicle identification number 1HGCV1F3XNA123456.",
+        "Claim Resolution and Final Summary\nFinal claim resolution completed on February 5, 2024, for claim number CLM-2024-00789-AUTO under\npolicy PAI-8847562-2023 for policyholder Sarah Mitchell.",
+        "Regional Claims Manager\nDavid Thompson. Total processing time from initial filing to final resolution was 21 calendar days\nmeeting company service standards.\nTotal claim payout amount of $47,850 distributed as follows: vehicle damage settlement of $43,510\npaid to Sarah Mitchell via electronic funds transfer on February 2, 2024, transaction reference number\nEFT-2024-02-00789.",
+        "on January 15 at 16:45:00\nhours. State Farm assigned claim number SF-2024-WA-12847 and Claims Representative Michael\nTorres to handle their insured's liability exposure. Torres contacted Progressive Insurance on January\n17 to discuss subrogation and liability acceptance.",
+        "authorizing claims payment processing. The\nsubrogation recovery against State Farm Insurance initiated under file number SUB-2024-00789 to\nrecover all costs paid to Mitchell including her deductible amount of $500 dollars."
+      ],
+      "ground_truth": "The claim number for this insurance claim is CLM-2024-00789-AUTO.",
+      "query_type": "needle",
+      "routed_type": "needle",
+      "expected_chunks": [
+        "page_1_chunk_0"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_chunk_0",
+        "page_1_chunk_1",
+        "page_10_chunk_0",
+        "page_10_chunk_2",
+        "page_9_chunk_3",
+        "page_9_chunk_8"
+      ]
+    },
+    {
+      "test_id": "summary_01",
+      "question": "What was the total estimated claim value?",
+      "answer": "The total estimated claim value for Sarah Mitchell's insurance claim, CLM-2024-00789-AUTO, is $47,850. This amount encompasses $44,010 for vehicle damage repairs and $3,840 for medical expenses incurred due to the accident.",
+      "contexts": [
+        "On January 15, 2024, claim number CLM-2024-00789-AUTO was filed by policyholder Sarah Mitchell for her 2022 Honda Accord. The incident involved a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle, occurring at 09:23:45 AM. The total estimated claim value is $47,850, covering vehicle repairs and medical expenses.",
+        "Claim ID CLM-2024-00789-AUTO was resolved on February 5, 2024, for policyholder Sarah Mitchell. The claim involved vehicle damage from an accident that occurred in Seattle. The total estimated claim value is $47,850, which includes a vehicle damage settlement of $43,510 and medical expenses of $3,840.",
+        "On January 17, 2024, at 09:00 AM, Progressive Auto Insurance Claims Adjuster Linda Martinez completed a financial assessment for claim file CLM-2024-00789-AUTO. The assessment revealed total vehicle damage costs of $44,010 and medical expenses of $3,840, resulting in a total claim value of $47,850. Mitchell's policy provides comprehensive coverage with a $500 deductible, leading to a net payment of $43,510 for vehicle costs and $3,840 paid directly to medical providers.",
+        "On January 15, 2024, at 14:45:18, Mitchell was examined by Dr. Michael Patterson at Seattle Medical Center following a vehicle accident. Claims Adjuster Linda Martinez conducted a phone interview with Mitchell to document the incident. The investigation determined Robert Chen was 100% at fault, with a total estimated claim value of $47,850, including $44,010 for vehicle damage and $3,840 for medical expenses.",
+        "On January 16, 2024, at 10:30 AM, Mitchell's 2022 Honda Accord was inspected at Premier Auto Body Shop by Certified Inspector Thomas Blake. The inspection revealed extensive structural damage requiring complete replacement of key components, with total parts costs estimated at $12,450. Labor costs for 87.5 hours of work were calculated at $8,312.50. Third-party appraiser David Richardson confirmed the repair estimates and structural integrity restoration in his report (IAA-2024-1567). Additional costs included $890 for equipment rental and $2,340 for paint materials.",
+        "On January 18, 2024, at 13:30:00, the Seattle Police Department issued a traffic citation to Robert Chen for failing to obey a traffic control device. State Farm Insurance accepted liability for the incident, confirming 100% fault for Chen, and issued a formal acceptance letter. The claim, involving Sarah Mitchell, includes damages for vehicle repair, medical expenses, and lost wages, totaling $500 in deductible costs. Progressive Auto Insurance authorized claims payment processing based on the liability determination."
+      ],
+      "ground_truth": "The total estimated claim value was $47,850, consisting of $44,010 for vehicle repairs and $3,840 for medical expenses.",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary",
+        "page_4_summary",
+        "page_5_summary",
+        "page_9_summary"
+      ]
+    },
+    {
+      "test_id": "summary_02",
+      "question": "Summarize the events that led to the claim.",
+      "answer": "On January 15, 2024, Sarah Mitchell filed claim number CLM-2024-00789-AUTO following a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle. The accident occurred at approximately 09:23 AM when Robert Chen failed to obey a traffic control device, entering the intersection against a red light. Witness Marcus Thompson confirmed Chen's violation, noting that his brake lights did not activate until after he entered the intersection. The Seattle Police Department subsequently issued a citation to Chen, who was determined to be 100% at fault for the incident, leading to the claim for vehicle repairs and medical expenses totaling $47,850.",
+      "contexts": [
+        "On January 15, 2024, claim number CLM-2024-00789-AUTO was filed by policyholder Sarah Mitchell for her 2022 Honda Accord. The incident involved a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle, occurring at 09:23:45 AM. The total estimated claim value is $47,850, covering vehicle repairs and medical expenses.",
+        "Claim ID CLM-2024-00789-AUTO was resolved on February 5, 2024, for policyholder Sarah Mitchell. The claim involved vehicle damage from an accident that occurred in Seattle. The total estimated claim value is $47,850, which includes a vehicle damage settlement of $43,510 and medical expenses of $3,840.",
+        "On January 17, 2024, at 09:00 AM, Progressive Auto Insurance Claims Adjuster Linda Martinez completed a financial assessment for claim file CLM-2024-00789-AUTO. The assessment revealed total vehicle damage costs of $44,010 and medical expenses of $3,840, resulting in a total claim value of $47,850. Mitchell's policy provides comprehensive coverage with a $500 deductible, leading to a net payment of $43,510 for vehicle costs and $3,840 paid directly to medical providers.",
+        "On January 18, 2024, at 13:30:00, the Seattle Police Department issued a traffic citation to Robert Chen for failing to obey a traffic control device. State Farm Insurance accepted liability for the incident, confirming 100% fault for Chen, and issued a formal acceptance letter. The claim, involving Sarah Mitchell, includes damages for vehicle repair, medical expenses, and lost wages, totaling $500 in deductible costs. Progressive Auto Insurance authorized claims payment processing based on the liability determination.",
+        "On January 15, 2024, at 14:45:18, Mitchell was examined by Dr. Michael Patterson at Seattle Medical Center following a vehicle accident. Claims Adjuster Linda Martinez conducted a phone interview with Mitchell to document the incident. The investigation determined Robert Chen was 100% at fault, with a total estimated claim value of $47,850, including $44,010 for vehicle damage and $3,840 for medical expenses.",
+        "On January 15, 2024, at 11:45 AM, witness Marcus Thompson reported a collision involving Chen's vehicle, which entered an intersection against a red light. Thompson observed the incident from a bus stop and confirmed that Chen's brake lights did not activate until after entering the intersection. Traffic Engineer Dr. Susan Miller analyzed the traffic signal timing, while the Video Forensics Team provided evidence of a 2.277-second red light violation. No financial amounts were mentioned in the report."
+      ],
+      "ground_truth": "On January 15, 2024, at 09:23:45 AM, Sarah Mitchell was involved in a multi-vehicle collision at the intersection of Pine Street and 4th Avenue in Seattle. Robert Chen's Toyota Camry ran a red light at 45 mph and struck Mitchell's Honda Accord on the driver's side door. Emergency responders arrived within 8 minutes, and Mitchell was transported to Seattle Medical Center with whiplash and cervical spine strain. The incident occurred during morning rush hour on wet roads from overnight rainfall.",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_2_summary",
+        "page_3_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary",
+        "page_9_summary",
+        "page_4_summary",
+        "page_7_summary"
+      ]
+    },
+    {
+      "test_id": "summary_03",
+      "question": "What was the outcome of Sarah Mitchell's medical treatment?",
+      "answer": "Sarah Mitchell's medical treatment following the accident was comprehensive and included a follow-up appointment with Dr. Michael Patterson, who noted a decrease in her pain level from six to four. She was prescribed a 12-session physical therapy program at Seattle Rehabilitation Center, which was managed by Physical Therapist Amanda Chen. The total estimated medical treatment costs amounted to $3,840, all of which were fully covered by her insurance policy. Overall, her treatment aimed to address cervical spine tenderness and improve her recovery from the injuries sustained in the collision.",
+      "contexts": [
+        "On January 15, 2024, claim number CLM-2024-00789-AUTO was filed by policyholder Sarah Mitchell for her 2022 Honda Accord. The incident involved a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle, occurring at 09:23:45 AM. The total estimated claim value is $47,850, covering vehicle repairs and medical expenses.",
+        "Claim ID CLM-2024-00789-AUTO was resolved on February 5, 2024, for policyholder Sarah Mitchell. The claim involved vehicle damage from an accident that occurred in Seattle. The total estimated claim value is $47,850, which includes a vehicle damage settlement of $43,510 and medical expenses of $3,840.",
+        "On January 22, 2024, Mitchell attended a follow-up appointment with Dr. Michael Patterson at Seattle Medical Center, revealing cervical spine tenderness and a pain level decrease from six to four. Dr. Patterson prescribed a 12-session physical therapy program at Seattle Rehabilitation Center, led by Physical Therapist Amanda Chen. The total estimated medical treatment costs amount to $3,840, fully covered by Mitchell's insurance policy.",
+        "On January 15, 2024, at 14:45:18, Mitchell was examined by Dr. Michael Patterson at Seattle Medical Center following a vehicle accident. Claims Adjuster Linda Martinez conducted a phone interview with Mitchell to document the incident. The investigation determined Robert Chen was 100% at fault, with a total estimated claim value of $47,850, including $44,010 for vehicle damage and $3,840 for medical expenses.",
+        "On January 15, 2024, at 09:23:45 AM, a collision occurred at the intersection of Maple Avenue and 5th Street in Seattle, involving Sarah Mitchell and Robert Chen. Mitchell was traveling northbound when Chen, driving a 2019 Toyota Camry, entered the intersection against a red light, resulting in a significant impact on Mitchell's Honda Accord. The collision caused her vehicle to rotate and hit a parked Ford F-150. Mitchell reported neck pain and dizziness; no financial amounts were mentioned in the details provided.",
+        "On January 15, 2024, at 09:31:22 AM, first responders from the Seattle Fire Department and Medic Unit 47 arrived at a collision scene. Paramedic Jennifer Ross assessed the injured party, Sarah Mitchell, who reported significant neck stiffness and a headache. Officer James Wilson secured the intersection, and evidence revealed that Chen's vehicle had a brake warning light active for 12 days prior to the incident. Property damage estimates totaled $47,850, including $18,400 for Mitchell's vehicle and $22,300 for Chen's vehicle."
+      ],
+      "ground_truth": "Sarah Mitchell was diagnosed with Grade 2 whiplash injury, cervical spine strain, and mild concussion. She underwent emergency care, CT scan, and was prescribed physical therapy consisting of 12 sessions over 6 weeks. By her follow-up appointment, her pain had improved from 6 to 4 out of 10. She received full medical clearance from Dr. Patterson on February 3, 2024, with a good prognosis for full recovery. Total medical costs were $3,840.",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_3_summary",
+        "page_4_summary",
+        "page_6_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_6_summary",
+        "page_4_summary",
+        "page_2_summary",
+        "page_3_summary"
+      ]
+    },
+    {
+      "test_id": "summary_04",
+      "question": "Who was determined to be at fault and why?",
+      "answer": "Robert Chen was determined to be 100% at fault for the accident involving Sarah Mitchell's vehicle. This conclusion was supported by multiple pieces of evidence, including a traffic citation issued by the Seattle Police Department for failing to obey a traffic control device, specifically running a red light. Additionally, witness statements corroborated that Chen entered the intersection against the red light, and a traffic analysis confirmed a significant violation of the traffic signal timing. State Farm Insurance formally accepted liability based on these findings.",
+      "contexts": [
+        "On January 15, 2024, claim number CLM-2024-00789-AUTO was filed by policyholder Sarah Mitchell for her 2022 Honda Accord. The incident involved a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle, occurring at 09:23:45 AM. The total estimated claim value is $47,850, covering vehicle repairs and medical expenses.",
+        "Claim ID CLM-2024-00789-AUTO was resolved on February 5, 2024, for policyholder Sarah Mitchell. The claim involved vehicle damage from an accident that occurred in Seattle. The total estimated claim value is $47,850, which includes a vehicle damage settlement of $43,510 and medical expenses of $3,840.",
+        "On January 15, 2024, at 14:45:18, Mitchell was examined by Dr. Michael Patterson at Seattle Medical Center following a vehicle accident. Claims Adjuster Linda Martinez conducted a phone interview with Mitchell to document the incident. The investigation determined Robert Chen was 100% at fault, with a total estimated claim value of $47,850, including $44,010 for vehicle damage and $3,840 for medical expenses.",
+        "On January 18, 2024, at 13:30:00, the Seattle Police Department issued a traffic citation to Robert Chen for failing to obey a traffic control device. State Farm Insurance accepted liability for the incident, confirming 100% fault for Chen, and issued a formal acceptance letter. The claim, involving Sarah Mitchell, includes damages for vehicle repair, medical expenses, and lost wages, totaling $500 in deductible costs. Progressive Auto Insurance authorized claims payment processing based on the liability determination.",
+        "On January 15, 2024, at 09:23:45 AM, a collision occurred at the intersection of Maple Avenue and 5th Street in Seattle, involving Sarah Mitchell and Robert Chen. Mitchell was traveling northbound when Chen, driving a 2019 Toyota Camry, entered the intersection against a red light, resulting in a significant impact on Mitchell's Honda Accord. The collision caused her vehicle to rotate and hit a parked Ford F-150. Mitchell reported neck pain and dizziness; no financial amounts were mentioned in the details provided.",
+        "On January 15, 2024, at 11:45 AM, witness Marcus Thompson reported a collision involving Chen's vehicle, which entered an intersection against a red light. Thompson observed the incident from a bus stop and confirmed that Chen's brake lights did not activate until after entering the intersection. Traffic Engineer Dr. Susan Miller analyzed the traffic signal timing, while the Video Forensics Team provided evidence of a 2.277-second red light violation. No financial amounts were mentioned in the report."
+      ],
+      "ground_truth": "Robert Chen was determined to be 100% at fault for the collision. Evidence showed that Chen ran a red light at 45 mph, entered the intersection 2.3 seconds after the light turned red, and failed to yield the right of way. Video forensics, skid mark analysis, and witness testimony all confirmed that Chen violated traffic laws and caused the collision. Mitchell was following all traffic regulations and had the right of way.",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_2_summary",
+        "page_7_summary",
+        "page_9_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_4_summary",
+        "page_9_summary",
+        "page_2_summary",
+        "page_7_summary"
+      ]
+    },
+    {
+      "test_id": "summary_05",
+      "question": "What was the final resolution of the insurance claim?",
+      "answer": "The final resolution of the insurance claim CLM-2024-00789-AUTO, filed by Sarah Mitchell, occurred on February 5, 2024. The claim was settled for a total of $47,850, which included $43,510 for vehicle repairs and $3,840 for medical expenses. The settlement was based on the assessment of vehicle damage and medical costs, with State Farm Insurance accepting full liability for the incident involving Robert Chen. Mitchell's policy included a $500 deductible, which was accounted for in the final payment.",
+      "contexts": [
+        "On January 15, 2024, claim number CLM-2024-00789-AUTO was filed by policyholder Sarah Mitchell for her 2022 Honda Accord. The incident involved a multi-vehicle collision at the intersection of Maple Avenue and 5th Street in Downtown Seattle, occurring at 09:23:45 AM. The total estimated claim value is $47,850, covering vehicle repairs and medical expenses.",
+        "Claim ID CLM-2024-00789-AUTO was resolved on February 5, 2024, for policyholder Sarah Mitchell. The claim involved vehicle damage from an accident that occurred in Seattle. The total estimated claim value is $47,850, which includes a vehicle damage settlement of $43,510 and medical expenses of $3,840.",
+        "On January 17, 2024, at 09:00 AM, Progressive Auto Insurance Claims Adjuster Linda Martinez completed a financial assessment for claim file CLM-2024-00789-AUTO. The assessment revealed total vehicle damage costs of $44,010 and medical expenses of $3,840, resulting in a total claim value of $47,850. Mitchell's policy provides comprehensive coverage with a $500 deductible, leading to a net payment of $43,510 for vehicle costs and $3,840 paid directly to medical providers.",
+        "On January 18, 2024, at 13:30:00, the Seattle Police Department issued a traffic citation to Robert Chen for failing to obey a traffic control device. State Farm Insurance accepted liability for the incident, confirming 100% fault for Chen, and issued a formal acceptance letter. The claim, involving Sarah Mitchell, includes damages for vehicle repair, medical expenses, and lost wages, totaling $500 in deductible costs. Progressive Auto Insurance authorized claims payment processing based on the liability determination.",
+        "On January 15, 2024, at 14:45:18, Mitchell was examined by Dr. Michael Patterson at Seattle Medical Center following a vehicle accident. Claims Adjuster Linda Martinez conducted a phone interview with Mitchell to document the incident. The investigation determined Robert Chen was 100% at fault, with a total estimated claim value of $47,850, including $44,010 for vehicle damage and $3,840 for medical expenses.",
+        "On January 16, 2024, at 10:30 AM, Mitchell's 2022 Honda Accord was inspected at Premier Auto Body Shop by Certified Inspector Thomas Blake. The inspection revealed extensive structural damage requiring complete replacement of key components, with total parts costs estimated at $12,450. Labor costs for 87.5 hours of work were calculated at $8,312.50. Third-party appraiser David Richardson confirmed the repair estimates and structural integrity restoration in his report (IAA-2024-1567). Additional costs included $890 for equipment rental and $2,340 for paint materials."
+      ],
+      "ground_truth": "The claim was resolved on February 5, 2024, with a total payout of $47,850. Sarah Mitchell received $43,510 for vehicle damage (after $500 deductible), and $3,840 was paid directly to medical providers. The vehicle was repaired and passed quality inspection with certificate QCC-2024-0156. Mitchell received full medical clearance and completed all physical therapy. The claim was processed within 21 calendar days, meeting company service standards, with all parties satisfied and no disputes filed.",
+      "query_type": "summary",
+      "routed_type": "summary",
+      "expected_chunks": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary"
+      ],
+      "retrieved_chunk_ids": [
+        "page_1_summary",
+        "page_10_summary",
+        "page_8_summary",
+        "page_9_summary",
+        "page_4_summary",
+        "page_5_summary"
+      ]
+    }
+  ]
+}

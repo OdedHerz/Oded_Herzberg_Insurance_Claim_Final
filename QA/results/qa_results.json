@@ -1,0 +1,2036 @@
+{
+  "metadata": {
+    "report_generated": "2026-01-15T14:28:15.049779",
+    "report_type": "qa_testing_suite",
+    "version": "1.0.0"
+  },
+  "overall_scores": {
+    "system_score": 0.8212777777777777,
+    "agent_performance": {
+      "needle_agent": 0.8291666666666666,
+      "summary_agent": 0.6346666666666666,
+      "routing_agent": 1.0
+    },
+    "grader_performance": {
+      "code_grader": 0.8083333333333333,
+      "model_grader": 0.7577142857142857,
+      "hitl_grader": 0.8833333333333333
+    }
+  },
+  "agent_scores": {
+    "needle_agent": {
+      "total_tests": 20,
+      "average_code_score": 0.8083333333333332,
+      "average_model_score": 0.85,
+      "average_combined_score": 0.8291666666666666
+    },
+    "summary_agent": {
+      "total_tests": 15,
+      "average_code_score": null,
+      "average_model_score": 0.6346666666666666,
+      "average_combined_score": 0.6346666666666666
+    },
+    "routing_agent": {
+      "total_tests": 10,
+      "correct_routes": 10,
+      "accuracy": 1.0,
+      "needle_accuracy": 1.0,
+      "summary_accuracy": 1.0
+    }
+  },
+  "grader_scores": {
+    "code_grader": {
+      "average_score": 0.8083333333333333,
+      "needle_score": 0.8083333333333333,
+      "summary_score": null
+    },
+    "model_grader": {
+      "average_score": 0.7577142857142857,
+      "needle_score": 0.85,
+      "summary_score": 0.6346666666666666
+    },
+    "hitl_grader": {
+      "total_tests": 15,
+      "completed_tests": 15,
+      "skipped_tests": 0,
+      "average_rating": 4.533333333333333,
+      "average_score": 0.8833333333333333,
+      "by_agent_type": {
+        "needle": {
+          "total_tests": 5,
+          "average_rating": 4.0,
+          "average_score": 0.75
+        },
+        "summary": {
+          "total_tests": 5,
+          "average_rating": 3.6,
+          "average_score": 0.65
+        },
+        "routing": {
+          "total_tests": 5,
+          "average_rating": 5.0,
+          "average_score": 1.0
+        }
+      }
+    }
+  },
+  "detailed_results": {
+    "needle_tests": [
+      {
+        "test_id": "needle_01",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_01",
+          "test_type": "needle",
+          "checks": {
+            "time_pattern": {
+              "passed": true,
+              "matched": "09:23:45",
+              "pattern": "09:23:45|09:23",
+              "check_name": "time_pattern"
+            },
+            "time_format": {
+              "passed": true,
+              "matched": "09:23:45 AM",
+              "pattern": "\\d{2}:\\d{2}(:\\d{2})?\\s*(AM|PM)",
+              "check_name": "time_format"
+            },
+            "date_pattern": {
+              "passed": true,
+              "matched": "January 15, 2024",
+              "pattern": "January 15, 2024|2024-01-15",
+              "check_name": "date_pattern"
+            }
+          },
+          "passed_checks": 3,
+          "total_checks": 3,
+          "score": 1.0,
+          "details": [
+            "[PASS] time_pattern: Found '09:23:45'",
+            "[PASS] time_format: Found '09:23:45 AM'",
+            "[PASS] date_pattern: Found 'January 15, 2024'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_01",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects all details from the ground truth, including the exact time and date of the collision, and it specifies the time zone without introducing any inaccuracies."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects all details from the ground truth, including the exact time and date of the collision, and it specifies the time zone without introducing any inaccuracies.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_02",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_02",
+          "test_type": "needle",
+          "checks": {
+            "claim_id_pattern": {
+              "passed": true,
+              "matched": "CLM-2024-00789-AUTO",
+              "pattern": "CLM-2024-00789-AUTO",
+              "check_name": "claim_id_pattern"
+            },
+            "claim_format": {
+              "passed": true,
+              "matched": "CLM-2024-00789-AUTO",
+              "pattern": "CLM-\\d{4}-\\d{5}-[A-Z]+",
+              "check_name": "claim_format"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] claim_id_pattern: Found 'CLM-2024-00789-AUTO'",
+            "[PASS] claim_format: Found 'CLM-2024-00789-AUTO'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_02",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer matches the ground truth exactly, providing all key information accurately and precisely without any hallucination."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer matches the ground truth exactly, providing all key information accurately and precisely without any hallucination.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_03",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_03",
+          "test_type": "needle",
+          "checks": {
+            "bp_pattern": {
+              "passed": true,
+              "matched": "145/92",
+              "pattern": "145/92",
+              "check_name": "bp_pattern"
+            },
+            "bp_format": {
+              "passed": true,
+              "matched": "145/92",
+              "pattern": "\\d{2,3}/\\d{2,3}",
+              "check_name": "bp_format"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] bp_pattern: Found '145/92'",
+            "[PASS] bp_format: Found '145/92'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_03",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects the ground truth with all key information included and precise details stated correctly, without any hallucinated information."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects the ground truth with all key information included and precise details stated correctly, without any hallucinated information.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_04",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_04",
+          "test_type": "needle",
+          "checks": {
+            "distance_pattern": {
+              "passed": true,
+              "matched": "47",
+              "pattern": "47",
+              "check_name": "distance_pattern"
+            },
+            "unit_pattern": {
+              "passed": true,
+              "matched": "feet",
+              "pattern": "feet|ft",
+              "check_name": "unit_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] distance_pattern: Found '47'",
+            "[PASS] unit_pattern: Found 'feet'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_04",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects the ground truth, includes all key information, states specific details precisely, and does not contain any hallucinated information."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects the ground truth, includes all key information, states specific details precisely, and does not contain any hallucinated information.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_05",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_05",
+          "test_type": "needle",
+          "checks": {
+            "speed_pattern": {
+              "passed": true,
+              "matched": "45",
+              "pattern": "45",
+              "check_name": "speed_pattern"
+            },
+            "unit_pattern": {
+              "passed": true,
+              "matched": "mph",
+              "pattern": "miles per hour|mph",
+              "check_name": "unit_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] speed_pattern: Found '45'",
+            "[PASS] unit_pattern: Found 'mph'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_05",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects the ground truth with all key information included and stated precisely, without any hallucinations."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects the ground truth with all key information included and stated precisely, without any hallucinations.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_06",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_06",
+          "test_type": "needle",
+          "checks": {
+            "name_pattern": {
+              "passed": true,
+              "matched": "Linda Martinez",
+              "pattern": "Linda Martinez",
+              "check_name": "name_pattern"
+            },
+            "role_pattern": {
+              "passed": true,
+              "matched": "Claims Adjuster",
+              "pattern": "Claims Adjuster|Adjuster",
+              "check_name": "role_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] name_pattern: Found 'Linda Martinez'",
+            "[PASS] role_pattern: Found 'Claims Adjuster'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_06",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 0.5,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 0.625,
+            "reasoning": "The agent's answer correctly identifies the claims adjuster but adds a specific time that is not in the ground truth, affecting completeness. All other details are accurate and precise."
+          },
+          "overall_score": 0.625,
+          "reasoning": "The agent's answer correctly identifies the claims adjuster but adds a specific time that is not in the ground truth, affecting completeness. All other details are accurate and precise.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.8125
+      },
+      {
+        "test_id": "needle_07",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_07",
+          "test_type": "needle",
+          "checks": {
+            "vin_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "1HGCV1F3XNA123456",
+              "check_name": "vin_pattern"
+            },
+            "vin_format": {
+              "passed": false,
+              "matched": null,
+              "pattern": "1HGCV[0-9A-Z]{11}",
+              "check_name": "vin_format"
+            }
+          },
+          "passed_checks": 0,
+          "total_checks": 2,
+          "score": 0.0,
+          "details": [
+            "[FAIL] vin_pattern: Pattern '1HGCV1F3XNA123456' not found",
+            "[FAIL] vin_format: Pattern '1HGCV[0-9A-Z]{11}' not found"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_07",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 0.0,
+            "completeness": 0.0,
+            "precision": 0.0,
+            "no_hallucination": 1.0,
+            "overall_score": 0.25,
+            "reasoning": "The agent's answer is factually incorrect and lacks key information about the VIN, but does not include hallucinated information."
+          },
+          "overall_score": 0.25,
+          "reasoning": "The agent's answer is factually incorrect and lacks key information about the VIN, but does not include hallucinated information.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.125
+      },
+      {
+        "test_id": "needle_08",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_08",
+          "test_type": "needle",
+          "checks": {
+            "duration_pattern": {
+              "passed": true,
+              "matched": "23 minutes",
+              "pattern": "23 minutes|23 min",
+              "check_name": "duration_pattern"
+            },
+            "time_pattern": {
+              "passed": true,
+              "matched": "09:52",
+              "pattern": "09:52|10:15",
+              "check_name": "time_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] duration_pattern: Found '23 minutes'",
+            "[PASS] time_pattern: Found '09:52'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_08",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects all key details from the ground truth, including the duration, departure, and arrival times, without any hallucinated information."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects all key details from the ground truth, including the duration, departure, and arrival times, without any hallucinated information.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_09",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_09",
+          "test_type": "needle",
+          "checks": {
+            "name_pattern": {
+              "passed": true,
+              "matched": "Michael Patterson",
+              "pattern": "Michael Patterson|Dr\\. Patterson",
+              "check_name": "name_pattern"
+            },
+            "title_pattern": {
+              "passed": true,
+              "matched": "Dr.",
+              "pattern": "Dr\\.|Doctor",
+              "check_name": "title_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] name_pattern: Found 'Michael Patterson'",
+            "[PASS] title_pattern: Found 'Dr.'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_09",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately states the attending physician's name and includes additional relevant details without introducing any hallucinated information."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately states the attending physician's name and includes additional relevant details without introducing any hallucinated information.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_10",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_10",
+          "test_type": "needle",
+          "checks": {
+            "make_pattern": {
+              "passed": true,
+              "matched": "Toyota",
+              "pattern": "Toyota",
+              "check_name": "make_pattern"
+            },
+            "model_pattern": {
+              "passed": true,
+              "matched": "Camry",
+              "pattern": "Camry",
+              "check_name": "model_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] make_pattern: Found 'Toyota'",
+            "[PASS] model_pattern: Found 'Camry'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_10",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects the make and model of the vehicle, includes all key information, and specifies the year correctly without any hallucinated details."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects the make and model of the vehicle, includes all key information, and specifies the year correctly without any hallucinated details.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_11",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_11",
+          "test_type": "needle",
+          "checks": {
+            "sessions_pattern": {
+              "passed": true,
+              "matched": "12",
+              "pattern": "12",
+              "check_name": "sessions_pattern"
+            },
+            "duration_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "6 weeks",
+              "check_name": "duration_pattern"
+            }
+          },
+          "passed_checks": 1,
+          "total_checks": 2,
+          "score": 0.5,
+          "details": [
+            "[PASS] sessions_pattern: Found '12'",
+            "[FAIL] duration_pattern: Pattern '6 weeks' not found"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_11",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer accurately reflects all key information from the ground truth, including the number of sessions and the time period, with precise language and no hallucinations."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer accurately reflects all key information from the ground truth, including the number of sessions and the time period, with precise language and no hallucinations.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.75
+      },
+      {
+        "test_id": "needle_12",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_12",
+          "test_type": "needle",
+          "checks": {
+            "hr_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "92",
+              "check_name": "hr_pattern"
+            },
+            "unit_pattern": {
+              "passed": true,
+              "matched": "beats per minute",
+              "pattern": "beats per minute|bpm",
+              "check_name": "unit_pattern"
+            }
+          },
+          "passed_checks": 1,
+          "total_checks": 2,
+          "score": 0.5,
+          "details": [
+            "[FAIL] hr_pattern: Pattern '92' not found",
+            "[PASS] unit_pattern: Found 'beats per minute'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_12",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 0.0,
+            "completeness": 0.5,
+            "precision": 0.5,
+            "no_hallucination": 1.0,
+            "overall_score": 0.5,
+            "reasoning": "The agent's answer contains an incorrect heart rate, which affects factual accuracy. It includes some relevant information but lacks the correct key detail, leading to a lower completeness score."
+          },
+          "overall_score": 0.5,
+          "reasoning": "The agent's answer contains an incorrect heart rate, which affects factual accuracy. It includes some relevant information but lacks the correct key detail, leading to a lower completeness score.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.5
+      },
+      {
+        "test_id": "needle_13",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_13",
+          "test_type": "needle",
+          "checks": {
+            "street1_pattern": {
+              "passed": true,
+              "matched": "Maple Avenue",
+              "pattern": "Maple Avenue",
+              "check_name": "street1_pattern"
+            },
+            "street2_pattern": {
+              "passed": true,
+              "matched": "5th Street",
+              "pattern": "5th Street",
+              "check_name": "street2_pattern"
+            },
+            "city_pattern": {
+              "passed": true,
+              "matched": "Seattle",
+              "pattern": "Seattle",
+              "check_name": "city_pattern"
+            }
+          },
+          "passed_checks": 3,
+          "total_checks": 3,
+          "score": 1.0,
+          "details": [
+            "[PASS] street1_pattern: Found 'Maple Avenue'",
+            "[PASS] street2_pattern: Found '5th Street'",
+            "[PASS] city_pattern: Found 'Seattle'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_13",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer is factually accurate, complete, precise, and does not contain any hallucinated information. It includes all relevant details from the ground truth."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer is factually accurate, complete, precise, and does not contain any hallucinated information. It includes all relevant details from the ground truth.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_14",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_14",
+          "test_type": "needle",
+          "checks": {
+            "temp_pattern": {
+              "passed": true,
+              "matched": "42",
+              "pattern": "42",
+              "check_name": "temp_pattern"
+            },
+            "unit_pattern": {
+              "passed": true,
+              "matched": "degrees",
+              "pattern": "Fahrenheit|°F|degrees",
+              "check_name": "unit_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] temp_pattern: Found '42'",
+            "[PASS] unit_pattern: Found 'degrees'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_14",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer is identical to the ground truth, providing accurate, complete, and precise information without any hallucinations."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer is identical to the ground truth, providing accurate, complete, and precise information without any hallucinations.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_15",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_15",
+          "test_type": "needle",
+          "checks": {
+            "name_pattern": {
+              "passed": true,
+              "matched": "James Wilson",
+              "pattern": "James Wilson|Officer Wilson",
+              "check_name": "name_pattern"
+            },
+            "title_pattern": {
+              "passed": true,
+              "matched": "Officer",
+              "pattern": "Officer",
+              "check_name": "title_pattern"
+            },
+            "dept_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "Seattle Police",
+              "check_name": "dept_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 3,
+          "score": 0.6666666666666666,
+          "details": [
+            "[PASS] name_pattern: Found 'James Wilson'",
+            "[PASS] title_pattern: Found 'Officer'",
+            "[FAIL] dept_pattern: Pattern 'Seattle Police' not found"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_15",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 0.5,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 0.625,
+            "reasoning": "The agent accurately identifies Officer James Wilson but omits the specific detail of the police department. The additional context about legal documentation is reasonable but not part of the ground truth."
+          },
+          "overall_score": 0.625,
+          "reasoning": "The agent accurately identifies Officer James Wilson but omits the specific detail of the police department. The additional context about legal documentation is reasonable but not part of the ground truth.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6458333333333333
+      },
+      {
+        "test_id": "needle_16",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_16",
+          "test_type": "needle",
+          "checks": {
+            "shop_pattern": {
+              "passed": true,
+              "matched": "Premier Auto Body Shop",
+              "pattern": "Premier Auto Body Shop|Premier Auto Body",
+              "check_name": "shop_pattern"
+            }
+          },
+          "passed_checks": 1,
+          "total_checks": 1,
+          "score": 1.0,
+          "details": [
+            "[PASS] shop_pattern: Found 'Premier Auto Body Shop'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_16",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer is factually accurate, complete, precise, and does not include any hallucinated information, matching the ground truth perfectly."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer is factually accurate, complete, precise, and does not include any hallucinated information, matching the ground truth perfectly.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_17",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_17",
+          "test_type": "needle",
+          "checks": {
+            "time_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "8",
+              "check_name": "time_pattern"
+            },
+            "unit_pattern": {
+              "passed": true,
+              "matched": "minutes",
+              "pattern": "minutes|mins",
+              "check_name": "unit_pattern"
+            }
+          },
+          "passed_checks": 1,
+          "total_checks": 2,
+          "score": 0.5,
+          "details": [
+            "[FAIL] time_pattern: Pattern '8' not found",
+            "[PASS] unit_pattern: Found 'minutes'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_17",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 0.5,
+            "completeness": 0.5,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 0.75,
+            "reasoning": "The agent's answer provides a specific response time but does not match the ground truth of 'within 8 minutes,' leading to partial accuracy and completeness."
+          },
+          "overall_score": 0.75,
+          "reasoning": "The agent's answer provides a specific response time but does not match the ground truth of 'within 8 minutes,' leading to partial accuracy and completeness.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.625
+      },
+      {
+        "test_id": "needle_18",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_18",
+          "test_type": "needle",
+          "checks": {
+            "pain_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "6",
+              "check_name": "pain_pattern"
+            },
+            "scale_pattern": {
+              "passed": false,
+              "matched": null,
+              "pattern": "out of 10|/10",
+              "check_name": "scale_pattern"
+            }
+          },
+          "passed_checks": 0,
+          "total_checks": 2,
+          "score": 0.0,
+          "details": [
+            "[FAIL] pain_pattern: Pattern '6' not found",
+            "[FAIL] scale_pattern: Pattern 'out of 10|/10' not found"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_18",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 0.0,
+            "completeness": 0.0,
+            "precision": 0.0,
+            "no_hallucination": 1.0,
+            "overall_score": 0.25,
+            "reasoning": "The agent's answer is factually incorrect and lacks key information about Sarah Mitchell's pain level, but it does not include any hallucinated information."
+          },
+          "overall_score": 0.25,
+          "reasoning": "The agent's answer is factually incorrect and lacks key information about Sarah Mitchell's pain level, but it does not include any hallucinated information.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.125
+      },
+      {
+        "test_id": "needle_19",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_19",
+          "test_type": "needle",
+          "checks": {
+            "amount_pattern": {
+              "passed": true,
+              "matched": "$500",
+              "pattern": "500|\\$500",
+              "check_name": "amount_pattern"
+            },
+            "currency_pattern": {
+              "passed": true,
+              "matched": "$",
+              "pattern": "\\$",
+              "check_name": "currency_pattern"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] amount_pattern: Found '$500'",
+            "[PASS] currency_pattern: Found '$'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_19",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer is factually accurate, complete, precise, and does not contain any hallucinated information, matching the ground truth perfectly."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer is factually accurate, complete, precise, and does not contain any hallucinated information, matching the ground truth perfectly.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "needle_20",
+        "test_type": "needle",
+        "graded_at": "2026-01-15T11:13:46.346279",
+        "code_grader": {
+          "test_id": "needle_20",
+          "test_type": "needle",
+          "checks": {
+            "cert_pattern": {
+              "passed": true,
+              "matched": "WAR-2024-0156",
+              "pattern": "WAR-2024-0156",
+              "check_name": "cert_pattern"
+            },
+            "cert_format": {
+              "passed": true,
+              "matched": "WAR-2024-0156",
+              "pattern": "WAR-\\d{4}-\\d{4}",
+              "check_name": "cert_format"
+            }
+          },
+          "passed_checks": 2,
+          "total_checks": 2,
+          "score": 1.0,
+          "details": [
+            "[PASS] cert_pattern: Found 'WAR-2024-0156'",
+            "[PASS] cert_format: Found 'WAR-2024-0156'"
+          ]
+        },
+        "model_grader": {
+          "test_id": "needle_20",
+          "test_type": "needle",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "factual_accuracy": 1.0,
+            "completeness": 1.0,
+            "precision": 1.0,
+            "no_hallucination": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's answer is factually accurate, complete, precise, and does not include any hallucinated information, matching the ground truth perfectly."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's answer is factually accurate, complete, precise, and does not include any hallucinated information, matching the ground truth perfectly.",
+          "criteria_evaluated": [
+            "factual_accuracy",
+            "completeness",
+            "precision",
+            "no_hallucination",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      }
+    ],
+    "summary_tests": [
+      {
+        "test_id": "summary_01",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_01",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 1.0,
+            "coherence": 1.0,
+            "synthesis": 1.0,
+            "relevance": 1.0,
+            "accuracy": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's summary covers all major points accurately and is well-organized, presenting the information in a cohesive manner while remaining directly relevant to the question."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's summary covers all major points accurately and is well-organized, presenting the information in a cohesive manner while remaining directly relevant to the question.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "summary_02",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_02",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.6,
+            "reasoning": "The agent's summary covers some key points but misses details about the collision specifics and emergency response. It is well-organized and relevant, but some facts are inaccurate or incomplete."
+          },
+          "overall_score": 0.6,
+          "reasoning": "The agent's summary covers some key points but misses details about the collision specifics and emergency response. It is well-organized and relevant, but some facts are inaccurate or incomplete.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6
+      },
+      {
+        "test_id": "summary_03",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_03",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 0.5,
+            "synthesis": 0.5,
+            "relevance": 0.5,
+            "accuracy": 0.5,
+            "overall_score": 0.5,
+            "reasoning": "The agent's summary covers some key points but misses specific details like pain improvement and total costs. It is somewhat organized but lacks a clear flow, and while it presents accurate information, it does not fully align with the reference summary."
+          },
+          "overall_score": 0.5,
+          "reasoning": "The agent's summary covers some key points but misses specific details like pain improvement and total costs. It is somewhat organized but lacks a clear flow, and while it presents accurate information, it does not fully align with the reference summary.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.5
+      },
+      {
+        "test_id": "summary_04",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_04",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 1.0,
+            "coherence": 1.0,
+            "synthesis": 1.0,
+            "relevance": 1.0,
+            "accuracy": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's summary thoroughly covers all major points from the reference, is well-organized, integrates information cohesively, remains highly relevant, and presents accurate facts."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's summary thoroughly covers all major points from the reference, is well-organized, integrates information cohesively, remains highly relevant, and presents accurate facts.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "summary_05",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_05",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.6,
+            "reasoning": "The agent's summary covers some key points but has inaccuracies in the vehicle damage payout and lacks details about the quality inspection and therapy completion, affecting comprehensiveness and accuracy."
+          },
+          "overall_score": 0.6,
+          "reasoning": "The agent's summary covers some key points but has inaccuracies in the vehicle damage payout and lacks details about the quality inspection and therapy completion, affecting comprehensiveness and accuracy.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6
+      },
+      {
+        "test_id": "summary_06",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_06",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 1.0,
+            "coherence": 1.0,
+            "synthesis": 1.0,
+            "relevance": 1.0,
+            "accuracy": 1.0,
+            "overall_score": 1.0,
+            "reasoning": "The agent's summary thoroughly covers all major points from the reference, is well-organized, integrates information effectively, remains highly relevant, and presents accurate facts."
+          },
+          "overall_score": 1.0,
+          "reasoning": "The agent's summary thoroughly covers all major points from the reference, is well-organized, integrates information effectively, remains highly relevant, and presents accurate facts.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 1.0
+      },
+      {
+        "test_id": "summary_07",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_07",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.6,
+            "reasoning": "The agent's summary covers some key points but misses specific details like the exact timing of the response and the pain scale. It is well-organized and relevant but lacks full accuracy and synthesis."
+          },
+          "overall_score": 0.6,
+          "reasoning": "The agent's summary covers some key points but misses specific details like the exact timing of the response and the pain scale. It is well-organized and relevant but lacks full accuracy and synthesis.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6
+      },
+      {
+        "test_id": "summary_08",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_08",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 0.5,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.5,
+            "reasoning": "The agent's summary covers some key points but misses several milestones and has inaccuracies. It is somewhat organized but lacks a cohesive narrative, affecting overall clarity."
+          },
+          "overall_score": 0.5,
+          "reasoning": "The agent's summary covers some key points but misses several milestones and has inaccuracies. It is somewhat organized but lacks a cohesive narrative, affecting overall clarity.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.5
+      },
+      {
+        "test_id": "summary_09",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_09",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.6,
+            "reasoning": "The agent's summary covers some key points but misses critical details like the cost and deductible. It is well-organized and relevant, but the accuracy of the repair estimate and synthesis of information could be improved."
+          },
+          "overall_score": 0.6,
+          "reasoning": "The agent's summary covers some key points but misses critical details like the cost and deductible. It is well-organized and relevant, but the accuracy of the repair estimate and synthesis of information could be improved.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6
+      },
+      {
+        "test_id": "summary_10",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_10",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 0.5,
+            "synthesis": 0.5,
+            "relevance": 0.5,
+            "accuracy": 0.5,
+            "overall_score": 0.5,
+            "reasoning": "The agent's summary covers some key points but misses others, such as specific evidence like skid marks and weather conditions. It is somewhat organized but lacks a cohesive flow and includes some irrelevant details."
+          },
+          "overall_score": 0.5,
+          "reasoning": "The agent's summary covers some key points but misses others, such as specific evidence like skid marks and weather conditions. It is somewhat organized but lacks a cohesive flow and includes some irrelevant details.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.5
+      },
+      {
+        "test_id": "summary_11",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_11",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.6,
+            "reasoning": "The agent's summary covers some key points but includes additional details not present in the reference, affecting comprehensiveness and accuracy. However, it is well-organized and relevant."
+          },
+          "overall_score": 0.6,
+          "reasoning": "The agent's summary covers some key points but includes additional details not present in the reference, affecting comprehensiveness and accuracy. However, it is well-organized and relevant.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6
+      },
+      {
+        "test_id": "summary_12",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_12",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.0,
+            "coherence": 0.5,
+            "synthesis": 0.0,
+            "relevance": 0.5,
+            "accuracy": 0.5,
+            "overall_score": 0.2,
+            "reasoning": "The agent's summary lacks key details about weather and road conditions, making it incomplete. While it is somewhat organized, it fails to synthesize information effectively and does not fully address the question."
+          },
+          "overall_score": 0.2,
+          "reasoning": "The agent's summary lacks key details about weather and road conditions, making it incomplete. While it is somewhat organized, it fails to synthesize information effectively and does not fully address the question.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.2
+      },
+      {
+        "test_id": "summary_13",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_13",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 1.0,
+            "overall_score": 0.72,
+            "reasoning": "The agent's summary covers key points but omits details about the deductible and subrogation, affecting comprehensiveness and synthesis. However, it is coherent and accurate."
+          },
+          "overall_score": 0.72,
+          "reasoning": "The agent's summary covers key points but omits details about the deductible and subrogation, affecting comprehensiveness and synthesis. However, it is coherent and accurate.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.72
+      },
+      {
+        "test_id": "summary_14",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_14",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 1.0,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.6,
+            "reasoning": "The agent's summary covers some key points but misses details about pain levels and the specific medications. It is well-organized and relevant, but the synthesis of information could be improved."
+          },
+          "overall_score": 0.6,
+          "reasoning": "The agent's summary covers some key points but misses details about pain levels and the specific medications. It is well-organized and relevant, but the synthesis of information could be improved.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.6
+      },
+      {
+        "test_id": "summary_15",
+        "test_type": "summary",
+        "graded_at": "2026-01-15T11:20:09.280339",
+        "code_grader": {},
+        "model_grader": {
+          "test_id": "summary_15",
+          "test_type": "summary",
+          "model_used": "gpt-4o-mini",
+          "scores": {
+            "comprehensiveness": 0.5,
+            "coherence": 0.5,
+            "synthesis": 0.5,
+            "relevance": 1.0,
+            "accuracy": 0.5,
+            "overall_score": 0.5,
+            "reasoning": "The agent's summary covers some major points but misses key phases and has inaccuracies. It is somewhat organized but lacks a cohesive flow, making it less comprehensive overall."
+          },
+          "overall_score": 0.5,
+          "reasoning": "The agent's summary covers some major points but misses key phases and has inaccuracies. It is somewhat organized but lacks a cohesive flow, making it less comprehensive overall.",
+          "criteria_evaluated": [
+            "comprehensiveness",
+            "coherence",
+            "synthesis",
+            "relevance",
+            "accuracy",
+            "overall_score",
+            "reasoning"
+          ]
+        },
+        "combined_score": 0.5
+      }
+    ],
+    "routing_tests": [
+      {
+        "test_id": "routing_01",
+        "test_type": "routing",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: needle"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176408"
+      },
+      {
+        "test_id": "routing_02",
+        "test_type": "routing",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: summary"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176409"
+      },
+      {
+        "test_id": "routing_03",
+        "test_type": "routing",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: needle"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176410"
+      },
+      {
+        "test_id": "routing_04",
+        "test_type": "routing",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: summary"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176411"
+      },
+      {
+        "test_id": "routing_05",
+        "test_type": "routing",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: needle"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176411"
+      },
+      {
+        "test_id": "routing_06",
+        "test_type": "routing",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: summary"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176412"
+      },
+      {
+        "test_id": "routing_07",
+        "test_type": "routing",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: needle"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176412"
+      },
+      {
+        "test_id": "routing_08",
+        "test_type": "routing",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: summary"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176413"
+      },
+      {
+        "test_id": "routing_09",
+        "test_type": "routing",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: needle"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176414"
+      },
+      {
+        "test_id": "routing_10",
+        "test_type": "routing",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "passed": true,
+        "score": 1.0,
+        "details": [
+          "[PASS] Correct routing: summary"
+        ],
+        "graded_at": "2026-01-15T11:22:30.176414"
+      }
+    ],
+    "hitl_tests": [
+      {
+        "test_id": "hitl_needle_01",
+        "query_type": "needle",
+        "skipped": false,
+        "rating": 4,
+        "score": 0.75,
+        "feedback": "OK",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T11:51:39.756331",
+        "criteria": [
+          "Completeness: Are all injuries mentioned?",
+          "Clarity: Is the answer easy to understand?",
+          "Medical accuracy: Are medical terms used correctly?",
+          "Conciseness: Is the answer appropriately brief?",
+          "Usefulness: Would this answer satisfy a claims adjuster?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_needle_02",
+        "query_type": "needle",
+        "skipped": false,
+        "rating": 5,
+        "score": 1.0,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T11:51:47.914581",
+        "criteria": [
+          "Precision: Are date, time, and location all specified?",
+          "Clarity: Is the answer presented clearly?",
+          "Completeness: Includes all relevant temporal and spatial details?",
+          "Format: Is the information well-structured?",
+          "Usefulness: Sufficient detail for documentation?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_needle_03",
+        "query_type": "needle",
+        "skipped": false,
+        "rating": 4,
+        "score": 0.75,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T11:51:56.566626",
+        "criteria": [
+          "Completeness: Temperature, precipitation, road conditions?",
+          "Relevance: Does it explain impact on the accident?",
+          "Clarity: Easy to understand conditions?",
+          "Precision: Specific measurements provided?",
+          "Context: Explains how weather affected the situation?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_needle_04",
+        "query_type": "needle",
+        "skipped": false,
+        "rating": 3,
+        "score": 0.5,
+        "feedback": "ok",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T11:52:10.645453",
+        "criteria": [
+          "Completeness: All key personnel mentioned?",
+          "Organization: Grouped by role or chronologically?",
+          "Clarity: Names and roles clearly stated?",
+          "Relevance: Focuses on truly key people?",
+          "Usefulness: Helpful for claim tracking?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_needle_05",
+        "query_type": "needle",
+        "skipped": false,
+        "rating": 4,
+        "score": 0.75,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T11:52:25.505816",
+        "criteria": [
+          "Medical accuracy: Correct terminology and units?",
+          "Completeness: All vital signs mentioned?",
+          "Clarity: Easy for non-medical person to understand?",
+          "Precision: Exact measurements provided?",
+          "Context: Explains significance if needed?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_summary_01",
+        "query_type": "summary",
+        "skipped": false,
+        "rating": 3,
+        "score": 0.5,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T12:44:44.236750",
+        "criteria": [
+          "Comprehensiveness: Covers all major phases?",
+          "Organization: Logical flow and structure?",
+          "Conciseness: Not overly verbose or redundant?",
+          "Clarity: Easy to follow for someone unfamiliar with the case?",
+          "Usefulness: Provides sufficient executive summary?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_summary_02",
+        "query_type": "summary",
+        "skipped": false,
+        "rating": 3,
+        "score": 0.5,
+        "feedback": "ok",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T12:44:52.191114",
+        "criteria": [
+          "Analysis quality: Explains causal factors well?",
+          "Evidence synthesis: Integrates multiple evidence sources?",
+          "Logical coherence: Reasoning is sound?",
+          "Completeness: All relevant factors discussed?",
+          "Clarity: Conclusion is clear and justified?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_summary_03",
+        "query_type": "summary",
+        "skipped": false,
+        "rating": 4,
+        "score": 0.75,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T12:44:59.871904",
+        "criteria": [
+          "Narrative quality: Tells a coherent story?",
+          "Chronological accuracy: Events in proper sequence?",
+          "Completeness: All treatment phases covered?",
+          "Empathy: Appropriate tone for injury discussion?",
+          "Usefulness: Provides clear recovery trajectory?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_summary_04",
+        "query_type": "summary",
+        "skipped": false,
+        "rating": 4,
+        "score": 0.75,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T12:45:16.358619",
+        "criteria": [
+          "Technical accuracy: Subrogation process correct?",
+          "Clarity: Explains process for non-experts?",
+          "Completeness: All steps and parties mentioned?",
+          "Organization: Logical presentation?",
+          "Outcome focus: Clear resolution stated?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_summary_05",
+        "query_type": "summary",
+        "skipped": false,
+        "rating": 4,
+        "score": 0.75,
+        "feedback": "good",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T12:45:23.947017",
+        "criteria": [
+          "Financial accuracy: All amounts correct?",
+          "Comprehensiveness: All cost categories covered?",
+          "Clarity: Easy to understand cost breakdown?",
+          "Analysis: Explains distribution of costs?",
+          "Usefulness: Sufficient for financial review?"
+        ],
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_routing_01",
+        "query_type": "routing",
+        "skipped": false,
+        "rating": 5,
+        "score": 1.0,
+        "feedback": "",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T14:15:00.000000",
+        "criteria": [],
+        "evaluation_type": "binary",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_routing_02",
+        "query_type": "routing",
+        "skipped": false,
+        "rating": 5,
+        "score": 1.0,
+        "feedback": "",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T14:15:10.000000",
+        "criteria": [],
+        "evaluation_type": "binary",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_routing_03",
+        "query_type": "routing",
+        "skipped": false,
+        "rating": 5,
+        "score": 1.0,
+        "feedback": "",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T14:15:20.000000",
+        "criteria": [],
+        "evaluation_type": "binary",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_routing_04",
+        "query_type": "routing",
+        "skipped": false,
+        "rating": 5,
+        "score": 1.0,
+        "feedback": "",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T14:15:30.000000",
+        "criteria": [],
+        "evaluation_type": "binary",
+        "expected_route": "summary",
+        "actual_route": "summary",
+        "graded_at": "2026-01-15T14:28:15.049779"
+      },
+      {
+        "test_id": "hitl_routing_05",
+        "query_type": "routing",
+        "skipped": false,
+        "rating": 5,
+        "score": 1.0,
+        "feedback": "",
+        "reviewer": "user",
+        "timestamp": "2026-01-15T14:15:40.000000",
+        "criteria": [],
+        "evaluation_type": "binary",
+        "expected_route": "needle",
+        "actual_route": "needle",
+        "graded_at": "2026-01-15T14:28:15.049779"
+      }
+    ]
+  }
+}

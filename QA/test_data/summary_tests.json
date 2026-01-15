@@ -1,0 +1,111 @@
+{
+  "_description": "Summary Agent QA Tests - 15 questions testing high-level synthesis and overview",
+  "_note": "These tests require broad understanding and synthesis across multiple document sections. Evaluated with model grader only for semantic understanding.",
+  "tests": [
+    {
+      "id": "summary_01",
+      "question": "What was the total estimated claim value?",
+      "ground_truth": "The total estimated claim value was $47,850, consisting of $44,010 for vehicle repairs and $3,840 for medical expenses.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "accuracy", "synthesis"]
+    },
+    {
+      "id": "summary_02",
+      "question": "Summarize the events that led to the claim.",
+      "ground_truth": "On January 15, 2024, at 09:23:45 AM, Sarah Mitchell was involved in a collision at Maple Avenue and 5th Street when Robert Chen's Toyota Camry ran a red light at 45 mph and struck Mitchell's Honda Accord. Emergency responders arrived within 8 minutes, and Mitchell was transported to Seattle Medical Center with whiplash and cervical spine strain. The incident occurred during morning rush hour on wet roads.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "coherence", "chronological_accuracy", "synthesis"]
+    },
+    {
+      "id": "summary_03",
+      "question": "What was the outcome of Sarah Mitchell's medical treatment?",
+      "ground_truth": "Sarah Mitchell was diagnosed with Grade 2 whiplash, cervical spine strain, and mild concussion. She underwent emergency care, CT scan, and completed 12 physical therapy sessions over 6 weeks. Her pain improved from 6/10 to 4/10, and she received full medical clearance on February 3, 2024, with good prognosis for full recovery. Total medical costs were $3,840.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "medical_accuracy", "synthesis", "chronological_accuracy"]
+    },
+    {
+      "id": "summary_04",
+      "question": "Who was determined to be at fault and why?",
+      "ground_truth": "Robert Chen was determined to be 100% at fault. Evidence showed Chen ran a red light at 45 mph, entered the intersection 2.3 seconds after the light turned red, and failed to yield right of way. Video forensics, skid mark analysis, and witness testimony confirmed Chen violated traffic laws. Mitchell was following all regulations and had right of way.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["accuracy", "completeness", "synthesis", "logical_coherence"]
+    },
+    {
+      "id": "summary_05",
+      "question": "What was the final resolution of the insurance claim?",
+      "ground_truth": "The claim was resolved on February 5, 2024, with total payout of $47,850. Mitchell received $43,510 for vehicle damage (after $500 deductible) and $3,840 for medical expenses. The vehicle was repaired and passed quality inspection (certificate WAR-2024-0156). Mitchell received full medical clearance and completed all therapy. The claim was processed within 21 days with all parties satisfied.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "accuracy", "synthesis", "chronological_accuracy"]
+    },
+    {
+      "id": "summary_06",
+      "question": "What were the key findings from the accident investigation?",
+      "ground_truth": "The investigation found Robert Chen ran a red light 2.3 seconds after it turned red, traveling at 45 mph in a 30 mph zone. Skid marks measured 47 feet on wet pavement. Video footage and witness testimony confirmed Chen's traffic violations. Weather conditions (42°F, wet roads from overnight rain) contributed to stopping distance but fault was entirely Chen's for running the red light.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "synthesis", "accuracy", "logical_coherence"]
+    },
+    {
+      "id": "summary_07",
+      "question": "Describe the emergency response process.",
+      "ground_truth": "Emergency responders arrived within 8 minutes of the 09:23:45 AM collision. Medic Unit 47 with Paramedic Jennifer Ross assessed Mitchell at the scene (BP: 145/92, HR: 98 bpm, pain: 6/10). She was transported to Seattle Medical Center at 09:31:22 AM. Officer James Wilson secured the scene and documented evidence including skid marks, vehicle positions, and witness statements.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "chronological_accuracy", "synthesis"]
+    },
+    {
+      "id": "summary_08",
+      "question": "What was the timeline from collision to claim resolution?",
+      "ground_truth": "The claim spanned January 15 to February 5, 2024 (21 days). Key milestones: collision (Jan 15, 09:23 AM), emergency response (8 minutes later), hospital admission (Jan 15), damage assessment (Jan 16), therapy start (Jan 22), repair completion (Jan 30), medical clearance (Feb 3), and final resolution (Feb 5).",
+      "expected_route": "summary",
+      "model_grader_criteria": ["chronological_accuracy", "completeness", "synthesis"]
+    },
+    {
+      "id": "summary_09",
+      "question": "Describe the vehicle damage and repair process.",
+      "ground_truth": "Sarah Mitchell's Honda Accord sustained driver's side door damage, frame misalignment, and side airbag deployment. Premier Auto Body Shop performed repairs including door replacement, frame straightening, paint matching, and safety system restoration. Repairs cost $44,010, took approximately 10 days, and passed quality inspection (WAR-2024-0156). Mitchell paid $500 deductible.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "technical_accuracy", "synthesis"]
+    },
+    {
+      "id": "summary_10",
+      "question": "Summarize the evidence collected at the accident scene.",
+      "ground_truth": "Evidence included: 47-foot skid marks from Chen's vehicle, traffic camera footage showing red light violation, witness testimony from Marcus Thompson, vehicle position documentation, weather conditions (42°F, wet pavement), traffic signal timing data, and physical measurements. Officer James Wilson documented all evidence. Engineering analysis confirmed Chen entered intersection 2.3 seconds after red light.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "synthesis", "accuracy"]
+    },
+    {
+      "id": "summary_11",
+      "question": "What was the subrogation process outcome?",
+      "ground_truth": "Progressive Insurance pursued subrogation against Robert Chen's insurer, State Farm. Due to Chen's 100% fault determination with clear evidence (video, witnesses, police report), State Farm accepted full liability. Progressive recovered the full claim amount of $47,850 plus processing costs. The subrogation was completed efficiently without legal dispute.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "accuracy", "synthesis", "logical_coherence"]
+    },
+    {
+      "id": "summary_12",
+      "question": "Describe the weather and road conditions during the collision.",
+      "ground_truth": "The collision occurred during morning rush hour with ambient temperature of 42°F. Roads were wet from overnight rainfall accumulating 0.3 inches, creating slippery conditions. Visibility was reduced to 200 feet. The wet pavement contributed to longer stopping distances, evidenced by 47-foot skid marks. However, weather was not a primary factor in fault determination as Chen ran a red light.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["completeness", "synthesis", "contextual_accuracy"]
+    },
+    {
+      "id": "summary_13",
+      "question": "What were the total costs broken down by category?",
+      "ground_truth": "Total claim value: $47,850. Vehicle repairs: $44,010 (parts, labor, paint). Medical expenses: $3,840 (emergency care, CT scan, 12 physical therapy sessions, physician consultations). Mitchell paid $500 deductible. Progressive paid $43,510 for vehicle and $3,840 for medical. All costs were recovered via subrogation from State Farm.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["accuracy", "completeness", "financial_accuracy"]
+    },
+    {
+      "id": "summary_14",
+      "question": "Describe the medical diagnosis and treatment journey.",
+      "ground_truth": "Mitchell sustained Grade 2 whiplash injury, cervical spine strain, and mild concussion from the collision impact. Treatment included emergency room evaluation, CT scan to rule out serious injury, pain medication (Ibuprofen 600mg, Cyclobenzaprine 10mg), and 12 physical therapy sessions over 6 weeks. Dr. Michael Patterson provided care and final clearance. Pain decreased from 6/10 to 4/10 with full recovery expected.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["medical_accuracy", "completeness", "synthesis"]
+    },
+    {
+      "id": "summary_15",
+      "question": "How long did the entire claim process take and what were the major phases?",
+      "ground_truth": "The claim process took 21 calendar days (January 15 - February 5, 2024). Major phases: (1) Collision and emergency response (Jan 15), (2) Medical assessment and damage evaluation (Jan 15-17), (3) Treatment and repairs in parallel (Jan 19-30), (4) Medical clearance and quality inspection (Jan 30-Feb 3), (5) Final resolution and payment (Feb 5). Progressive met company service standards for processing time.",
+      "expected_route": "summary",
+      "model_grader_criteria": ["chronological_accuracy", "completeness", "synthesis", "organizational_clarity"]
+    }
+  ]
+}

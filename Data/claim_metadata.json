@@ -1,0 +1,160 @@
+{
+  "page_1": {
+    "page_number": 1,
+    "header": "Claim Introduction and Overview",
+    "involved_parties": [
+      "Sarah Mitchell",
+      "Progressive Auto Insurance",
+      "Claims Department"
+    ],
+    "date": "2024-01-15",
+    "type": "Overview",
+    "character_count": 1779
+  },
+  "page_2": {
+    "page_number": 2,
+    "header": "Initial Collision Dynamics",
+    "involved_parties": [
+      "Sarah Mitchell",
+      "Robert Chen",
+      "Seattle Police Department",
+      "Officer James Wilson"
+    ],
+    "date": "2024-01-15 09:23:45",
+    "type": "Details",
+    "character_count": 2503
+  },
+  "page_3": {
+    "page_number": 3,
+    "header": "Emergency Response and Triage",
+    "involved_parties": [
+      "Seattle Fire Department",
+      "Medic Unit 47",
+      "Paramedic Jennifer Ross",
+      "Officer James Wilson"
+    ],
+    "date": "2024-01-15 09:31:22",
+    "type": "Details",
+    "character_count": 2455
+  },
+  "page_4": {
+    "page_number": 4,
+    "header": "Hospitalization and Diagnosis",
+    "involved_parties": [
+      "Dr. Michael Patterson",
+      "Sarah Mitchell",
+      "Claims Adjuster Linda Martinez"
+    ],
+    "date": "2024-01-15 14:45:18",
+    "type": "Details",
+    "character_count": 2279
+  },
+  "page_5": {
+    "page_number": 5,
+    "header": "Technical Damage Assessment",
+    "involved_parties": [
+      "Premier Auto Body Shop",
+      "Inspector Thomas Blake",
+      "Progressive Insurance"
+    ],
+    "date": "2024-01-16 10:30:00",
+    "type": "Details",
+    "character_count": 2230
+  },
+  "page_6": {
+    "page_number": 6,
+    "header": "Physical Therapy and Rehabilitation",
+    "involved_parties": [
+      "Dr. Michael Patterson",
+      "Sarah Mitchell",
+      "Physical Therapist Amanda Chen"
+    ],
+    "date": "2024-01-22 08:00:00",
+    "type": "Details",
+    "character_count": 2193
+  },
+  "page_7": {
+    "page_number": 7,
+    "header": "Witness Testimony and Traffic Engineering",
+    "involved_parties": [
+      "Marcus Thompson",
+      "Seattle Police",
+      "Traffic Engineer Dr. Susan Miller"
+    ],
+    "date": "2024-01-15 11:45:00",
+    "type": "Details",
+    "character_count": 2069
+  },
+  "page_8": {
+    "page_number": 8,
+    "header": "Comprehensive Financial Analysis",
+    "involved_parties": [
+      "Progressive Auto Insurance",
+      "Claims Adjuster Linda Martinez",
+      "Finance Department"
+    ],
+    "date": "2024-01-17 09:00:00",
+    "type": "Details",
+    "character_count": 2271
+  },
+  "page_9": {
+    "page_number": 9,
+    "header": "Parts Procurement and Repair Execution",
+    "involved_parties": [
+      "Premier Auto Body Shop",
+      "Thomas Blake",
+      "Honda Parts Department"
+    ],
+    "date": "2024-01-19 08:30:00",
+    "type": "Details",
+    "character_count": 2170
+  },
+  "page_10": {
+    "page_number": 10,
+    "header": "Legal Documentation and Liability Determination",
+    "involved_parties": [
+      "Seattle Police",
+      "State Farm Insurance",
+      "Progressive Legal Department"
+    ],
+    "date": "2024-01-18 13:30:00",
+    "type": "Details",
+    "character_count": 2782
+  },
+  "page_11": {
+    "page_number": 11,
+    "header": "Subrogation Process and Recovery",
+    "involved_parties": [
+      "Progressive Subrogation Department",
+      "State Farm Insurance",
+      "Finance Department"
+    ],
+    "date": "2024-01-20 11:00:00",
+    "type": "Details",
+    "character_count": 3002
+  },
+  "page_12": {
+    "page_number": 12,
+    "header": "Repair Completion and Quality Assurance",
+    "involved_parties": [
+      "Premier Auto Body Shop",
+      "Progressive Insurance",
+      "Sarah Mitchell"
+    ],
+    "date": "2024-01-30 14:00:00",
+    "type": "Details",
+    "character_count": 2055
+  },
+  "page_13": {
+    "page_number": 13,
+    "header": "Claim Resolution and Final Summary",
+    "involved_parties": [
+      "Progressive Auto Insurance",
+      "Sarah Mitchell",
+      "Claims Department"
+    ],
+    "date": "2024-02-05",
+    "type": "Overview",
+    "character_count": 1278
+  }
+}

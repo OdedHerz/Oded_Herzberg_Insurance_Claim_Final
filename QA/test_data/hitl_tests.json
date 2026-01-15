@@ -1,0 +1,196 @@
+{
+  "_description": "Human-in-the-Loop QA Tests - 15 questions for subjective quality assessment",
+  "_note": "5 needle + 5 summary + 5 routing questions for human reviewers to evaluate quality and routing decisions",
+  "tests": [
+    {
+      "id": "hitl_needle_01",
+      "question": "What injuries did Sarah Mitchell sustain in the collision?",
+      "query_type": "needle",
+      "expected_route": "needle",
+      "evaluation_criteria": [
+        "Completeness: Are all injuries mentioned?",
+        "Clarity: Is the answer easy to understand?",
+        "Medical accuracy: Are medical terms used correctly?",
+        "Conciseness: Is the answer appropriately brief?",
+        "Usefulness: Would this answer satisfy a claims adjuster?"
+      ]
+    },
+    {
+      "id": "hitl_needle_02",
+      "question": "When and where did the collision take place?",
+      "query_type": "needle",
+      "expected_route": "needle",
+      "evaluation_criteria": [
+        "Precision: Are date, time, and location all specified?",
+        "Clarity: Is the answer presented clearly?",
+        "Completeness: Includes all relevant temporal and spatial details?",
+        "Format: Is the information well-structured?",
+        "Usefulness: Sufficient detail for documentation?"
+      ]
+    },
+    {
+      "id": "hitl_needle_03",
+      "question": "What was the weather like during the accident?",
+      "query_type": "needle",
+      "expected_route": "needle",
+      "evaluation_criteria": [
+        "Completeness: Temperature, precipitation, road conditions?",
+        "Relevance: Does it explain impact on the accident?",
+        "Clarity: Easy to understand conditions?",
+        "Precision: Specific measurements provided?",
+        "Context: Explains how weather affected the situation?"
+      ]
+    },
+    {
+      "id": "hitl_needle_04",
+      "question": "Who were the key people involved in handling this claim?",
+      "query_type": "needle",
+      "expected_route": "needle",
+      "evaluation_criteria": [
+        "Completeness: All key personnel mentioned?",
+        "Organization: Grouped by role or chronologically?",
+        "Clarity: Names and roles clearly stated?",
+        "Relevance: Focuses on truly key people?",
+        "Usefulness: Helpful for claim tracking?"
+      ]
+    },
+    {
+      "id": "hitl_needle_05",
+      "question": "What were the vital signs measured at the accident scene?",
+      "query_type": "needle",
+      "expected_route": "needle",
+      "evaluation_criteria": [
+        "Medical accuracy: Correct terminology and units?",
+        "Completeness: All vital signs mentioned?",
+        "Clarity: Easy for non-medical person to understand?",
+        "Precision: Exact measurements provided?",
+        "Context: Explains significance if needed?"
+      ]
+    },
+    {
+      "id": "hitl_summary_01",
+      "question": "Provide an overview of the entire insurance claim from start to finish.",
+      "query_type": "summary",
+      "expected_route": "summary",
+      "evaluation_criteria": [
+        "Comprehensiveness: Covers all major phases?",
+        "Organization: Logical flow and structure?",
+        "Conciseness: Not overly verbose or redundant?",
+        "Clarity: Easy to follow for someone unfamiliar with the case?",
+        "Usefulness: Provides sufficient executive summary?"
+      ]
+    },
+    {
+      "id": "hitl_summary_02",
+      "question": "What factors contributed to the accident and how was fault determined?",
+      "query_type": "summary",
+      "expected_route": "summary",
+      "evaluation_criteria": [
+        "Analysis quality: Explains causal factors well?",
+        "Evidence synthesis: Integrates multiple evidence sources?",
+        "Logical coherence: Reasoning is sound?",
+        "Completeness: All relevant factors discussed?",
+        "Clarity: Conclusion is clear and justified?"
+      ]
+    },
+    {
+      "id": "hitl_summary_03",
+      "question": "Describe Sarah Mitchell's journey from injury through recovery.",
+      "query_type": "summary",
+      "expected_route": "summary",
+      "evaluation_criteria": [
+        "Narrative quality: Tells a coherent story?",
+        "Chronological accuracy: Events in proper sequence?",
+        "Completeness: All treatment phases covered?",
+        "Empathy: Appropriate tone for injury discussion?",
+        "Usefulness: Provides clear recovery trajectory?"
+      ]
+    },
+    {
+      "id": "hitl_summary_04",
+      "question": "How did the insurance companies handle the subrogation process?",
+      "query_type": "summary",
+      "expected_route": "summary",
+      "evaluation_criteria": [
+        "Technical accuracy: Subrogation process correct?",
+        "Clarity: Explains process for non-experts?",
+        "Completeness: All steps and parties mentioned?",
+        "Organization: Logical presentation?",
+        "Outcome focus: Clear resolution stated?"
+      ]
+    },
+    {
+      "id": "hitl_summary_05",
+      "question": "What was the financial impact of this claim on all parties involved?",
+      "query_type": "summary",
+      "expected_route": "summary",
+      "evaluation_criteria": [
+        "Financial accuracy: All amounts correct?",
+        "Comprehensiveness: All cost categories covered?",
+        "Clarity: Easy to understand cost breakdown?",
+        "Analysis: Explains distribution of costs?",
+        "Usefulness: Sufficient for financial review?"
+      ]
+    },
+    {
+      "id": "hitl_routing_01",
+      "question": "What were Sarah Mitchell's initial symptoms after the accident?",
+      "query_type": "routing",
+      "expected_route": "needle",
+      "evaluation_type": "binary",
+      "evaluation_criteria": [
+        "Routing correctness: Should route to needle (specific fact retrieval)",
+        "Question asks for specific symptoms listed in documents",
+        "Binary: Was the routing decision correct? (yes/no)"
+      ]
+    },
+    {
+      "id": "hitl_routing_02",
+      "question": "Explain the overall progression of medical treatment and its outcomes.",
+      "query_type": "routing",
+      "expected_route": "summary",
+      "evaluation_type": "binary",
+      "evaluation_criteria": [
+        "Routing correctness: Should route to summary (synthesis required)",
+        "Question requires connecting multiple events into narrative",
+        "Binary: Was the routing decision correct? (yes/no)"
+      ]
+    },
+    {
+      "id": "hitl_routing_03",
+      "question": "What was the exact settlement amount?",
+      "query_type": "routing",
+      "expected_route": "needle",
+      "evaluation_type": "binary",
+      "evaluation_criteria": [
+        "Routing correctness: Should route to needle (precise fact)",
+        "Question asks for single specific number",
+        "Binary: Was the routing decision correct? (yes/no)"
+      ]
+    },
+    {
+      "id": "hitl_routing_04",
+      "question": "Compare the initial claim assessment with the final outcome and discuss key differences.",
+      "query_type": "routing",
+      "expected_route": "summary",
+      "evaluation_type": "binary",
+      "evaluation_criteria": [
+        "Routing correctness: Should route to summary (analysis required)",
+        "Question requires comparison and synthesis",
+        "Binary: Was the routing decision correct? (yes/no)"
+      ]
+    },
+    {
+      "id": "hitl_routing_05",
+      "question": "Who was the treating physician's name and contact information?",
+      "query_type": "routing",
+      "expected_route": "needle",
+      "evaluation_type": "binary",
+      "evaluation_criteria": [
+        "Routing correctness: Should route to needle (specific contact details)",
+        "Question asks for precise information retrieval",
+        "Binary: Was the routing decision correct? (yes/no)"
+      ]
+    }
+  ]
+}
